@@ -22,7 +22,7 @@ ALLOWED_HOSTS =env.list('ALLOWED_HOST_DEV')
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -30,8 +30,32 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+PROJECT_APPS =[
 
+]
+THIRD_PARTY_APPS = [
+    'corsheaders',
+    'rest_framework',
+    'ckeditor',
+    'ckeditor_uploader',
+
+]
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS +THIRD_PARTY_APPS
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ]
+    }
+}
+CKEDITOR_UPLOAD_PATH = "/media/"
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -95,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
@@ -108,12 +132,32 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+MEDIA_URL='/media/'
 
+STATICFILES_DIRS =[
+    os.path.join(BASE_DIR,'build/static')
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ]
+}
+CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST_DEV')
+CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS_DEV')
+
 if not DEBUG:
     ALLOWED_HOSTS=env.list('ALLOWED_HOST_DEPLOY')
+    CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST_DEPLOY')
+    CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS_DEPLOY')
+    DATABASES = {
+    "default" : env.db("DATABASE_URL"),
+    }
+    DATABASES["default"]["ATOMIC_REQUESTS"] = True
