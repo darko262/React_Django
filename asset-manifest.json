@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/%7Breact-django%7D/static/css/main.d0336672.css",
-    "main.js": "/%7Breact-django%7D/static/js/main.bc2ea223.js",
-    "static/media/sebas.png": "/%7Breact-django%7D/static/media/sebas.a2bb97c6ed5062339510.png",
-    "static/media/seba22.png": "/%7Breact-django%7D/static/media/seba22.5de5b8997a0cb16b1b0f.png",
-    "static/media/seba.gif": "/%7Breact-django%7D/static/media/seba.657bbd74a0e93d35345e.gif",
-    "static/media/seba.jpg": "/%7Breact-django%7D/static/media/seba.66db0ce54f5db7741432.jpg",
-    "static/media/logomid23.png": "/%7Breact-django%7D/static/media/logomid23.84211d2de770febdab37.png",
-    "static/media/terminator3.gif": "/%7Breact-django%7D/static/media/terminator3.0085114982d4519bd1e4.gif",
-    "static/media/python.png": "/%7Breact-django%7D/static/media/python.d7a21d969a68b01c2b64.png",
-    "static/media/porta1.webp": "/%7Breact-django%7D/static/media/porta1.0dce083ba65db223a689.webp",
-    "static/media/css.png": "/%7Breact-django%7D/static/media/css.6242b9b9ad3379a668da.png",
-    "static/media/slick.svg": "/%7Breact-django%7D/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/%7Breact-django%7D/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/%7Breact-django%7D/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/%7Breact-django%7D/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/%7Breact-django%7D/index.html",
-    "main.d0336672.css.map": "/%7Breact-django%7D/static/css/main.d0336672.css.map",
-    "main.bc2ea223.js.map": "/%7Breact-django%7D/static/js/main.bc2ea223.js.map"
+    "main.css": "/%7BReact_Django%7D/static/css/main.ee7f575a.css",
+    "main.js": "/%7BReact_Django%7D/static/js/main.5cff97a9.js",
+    "static/media/sebas.png": "/%7BReact_Django%7D/static/media/sebas.a2bb97c6ed5062339510.png",
+    "static/media/seba22.png": "/%7BReact_Django%7D/static/media/seba22.5de5b8997a0cb16b1b0f.png",
+    "static/media/seba.gif": "/%7BReact_Django%7D/static/media/seba.657bbd74a0e93d35345e.gif",
+    "static/media/seba.jpg": "/%7BReact_Django%7D/static/media/seba.66db0ce54f5db7741432.jpg",
+    "static/media/logomid23.png": "/%7BReact_Django%7D/static/media/logomid23.84211d2de770febdab37.png",
+    "static/media/terminator3.gif": "/%7BReact_Django%7D/static/media/terminator3.0085114982d4519bd1e4.gif",
+    "static/media/python.png": "/%7BReact_Django%7D/static/media/python.d7a21d969a68b01c2b64.png",
+    "static/media/porta1.webp": "/%7BReact_Django%7D/static/media/porta1.0dce083ba65db223a689.webp",
+    "static/media/css.png": "/%7BReact_Django%7D/static/media/css.6242b9b9ad3379a668da.png",
+    "static/media/slick.svg": "/%7BReact_Django%7D/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/%7BReact_Django%7D/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/%7BReact_Django%7D/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/%7BReact_Django%7D/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/%7BReact_Django%7D/index.html",
+    "main.ee7f575a.css.map": "/%7BReact_Django%7D/static/css/main.ee7f575a.css.map",
+    "main.5cff97a9.js.map": "/%7BReact_Django%7D/static/js/main.5cff97a9.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0336672.css",
-    "static/js/main.bc2ea223.js"
+    "static/css/main.ee7f575a.css",
+    "static/js/main.5cff97a9.js"
   ]
 }
