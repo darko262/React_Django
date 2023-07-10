@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 import imagent3 from "../../assets/img/html2.png"
-import imagent32 from "../../assets/img/logomid23.png"
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -54,7 +54,7 @@ export function Referencia() {
 
     };
     return (
-        <section className="min-h-screen  bg-black py-28 md:py-9 md:w-full w-full lg:py-28">
+        <section className="min-h-screen   py-28 md:py-9 md:w-full w-full lg:py-28">
             <h2 className="text-6xl text-white md:mb-32  mb-12 text-center "> Mis <span className="text-blue-500">Referencias</span></h2>
             <div className='w-full md:w-2/3 lg:left-64 md:left-36 md:absolute h-full'>
             <Slider {...settings}>

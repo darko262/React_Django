@@ -32,13 +32,13 @@ export function BtnSectionGray({ text }) {
 export function BtnSectionAbajo() {
   return (
     <div className='flex relative'>
-      <button className="w-full h-14 flex items-center justify-center mr-2 ">
+      <button className="w-18 h-14 flex items-center justify-center mr-2 ">
         <Instagram className="text-pink-500 hover:text-white bg-white hover:bg-pink-500 rounded-full hover:scale-125  transition hover:pointer" />
       </button>
-      <button className="w-full h-14 flex items-center justify-center mr-2 ">
+      <button className="w-18 h-14 flex items-center justify-center mr-2 ">
         <Twitter className="text-sky-500 bg-white rounded-full  hover:scale-125  transition hover:pointer hover:bg-sky-500 hover:text-white" />
       </button>
-      <button className="w-full h-14 flex items-center justify-center mr-2">
+      <button className="w-18 h-14 flex items-center justify-center mr-2">
         <Github className="text-black bg-white rounded-full  hover:scale-125  transition hover:pointer hover:bg-black hover:text-white" />
       </button>
     </div>

@@ -1,50 +1,65 @@
-import { BoxService, BoxServiceSombra } from "components/iconos/BoxService";
-import imagent from "../../assets/img/logomid23.png";
-import { BtnSection, BtnSectionAbajo } from "./BtnSection";
-import backen from "../../assets/img/porta1.webp"
+
+
+import backen from "../../assets/img/otro.jpg"
 import { BoxProyectos } from "components/iconos/BoxProyectos";
-// export function Recientes() {
-//     return (
-//       <section className="w-full h-screen bg-zinc-900 py-3.5 md:px-20">
-//         <div className="container">
-//           <h2 className="text-center text-3xl md:text-6xl text-white mb-7">
-//             Proyectos <span className="text-blue-500">Recientes</span>
-//           </h2>
-  
-//           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-//             <BoxProyectos logo={backen} />
-//             <BoxProyectos logo={backen} />
-//             <BoxProyectos logo={backen} />
-            
-//           </div>
-//         </div>
-//       </section>
-//     );
-//   }
-  
+import { getAllProyectos } from "api/Proyecto.api";
+import { useEffect, useState } from "react";
+import { motion } from 'framer-motion'
+import Fondo from "components/iconos/Fondo";
+
+
 
 
 export function Recientes() {
+
+    const [proyect, setProyect] = useState([]);
+    // const [languages, setLanguages] = useState([]);
+
+    useEffect(() => {
+        async function loadProyectos() {
+            const res = await getAllProyectos();
+
+            setProyect(res.data.results.posts)
+            // setProyect(res.data.results.posts)
+          
+            console.log(res.data.results.posts);
+        }
+        loadProyectos();
+    }, []);
+
+
+
+
     return (
-        <section className="w-auto min-h-screen bg-zinc-900 py-28 md:px-20 ">
-            <div className="container ">
+        <section className="w-auto min-h-screen  md:px-20 relative ">
+            <Fondo posicion={"top-1/2  "} />
+            <Fondo posicion={" right-0" } />
+            <motion.div className="container z-10 "
+            >
                 <h2 className="text-center text-3xl md:text-6xl text-white mb-7">
                     Proyectos <span className="text-blue-500">Recientes</span>
+
                 </h2>
+                <motion.div className="lg:flex lg:flex-row lg:w-full lg:flex-wrap lg:h-full lg:justify-center z-10 "
+                   >
+                    {proyect.map(post => (
+                        <motion.div key={post.id}
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        transition={{ duration: 0.5 }}
+                        whileInView={{ opacity: 1, scale: 1 }} >
 
-                <div className="flex lg:flex-row w-full flex-wrap h-full">
-                    <BoxProyectos logo={backen} />
-                    <BoxProyectos logo={backen} />
-                    <BoxProyectos logo={backen} />
-                    <BoxProyectos logo={backen} />
-                    <BoxProyectos logo={backen} />
-                    <BoxProyectos logo={backen} />
-                    <BoxProyectos logo={backen} />
-                    
-                    
+                            <BoxProyectos titulo={post.title} logo={backen} parrafo={post.description} slug={post.slug}  lenguaje={post.languages.map(language => language.name)}/>
+                            {/* <BoxProyectos titulo={post.title} logo={backen} parrafo={post.description} slug={post.slug}  lenguaje={[post.languages.name]}/> */}
+                            
+                        </motion.div>
 
-                </div>
-            </div>
+                        
+                        // <div key={post.id} >
+                        //     <BoxProyectos titulo={post.title} logo={post.thumbnail} />
+                        // </div>
+                    ))}
+                </motion.div>
+            </motion.div>
         </section>
     );
 }

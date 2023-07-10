@@ -1,18 +1,19 @@
-import imagent3 from "../../assets/img/sebas.png";
-import imagent4 from "../../assets/img/terminator3.gif";
+
+// import imagent4 from "../../assets/img/roboto.png";
+import imagent4 from "../../assets/img/programacion.jpg";
 export function Contact() {
     return (
-        <section className="relative items-center flex bg-zinc-900 w-full min-h-screen justify-center py-28 ">
-            <div className="grid lg:grid-rows-1 lg:grid-cols-2 grid-rows-2 h-full w-5/6  ">
-                <div className="h-full  w-full place-content-center grid">
-                <img  src={imagent4} alt=""className=" h-full w-full object-cover grayscale object-top overflow-hidden aspect-square rounded-full" />
+        <section className="relative  flex  w-full min-h-screen justify-center py-28 ">
+            <div className="grid  lg:grid-cols-2 grid-rows-1 h-full w-5/6   ">
+                <div className="h-full  w-full place-content-center grid  ">
+                    <img src={imagent4} alt="" className=" h-full w-full object-cover overflow-hidden aspect-square lg:rounded-l-3xl rounded-tl-3xl " />
 
                 </div>
-                <div className="h-full bg-gradient-to-r from-transparent to-blue-400 w-full text-center py-5 rounded-xl">
+                <div className="h-full lg:bg-gradient-to-r  bg-gradient-to-b from-transparent to-blue-500 w-full text-center py-5 lg:rounded-xl rounded-b-3xl text-white">
                     <form>
-                        <div className="border-b border-gray-900/10 pb-12">
-                            <h2 className="text-base font-semibold leading-7 text-gray-900">Profile</h2>
-                            <p className="mt-1 text-sm leading-6 text-gray-600">
+                        <div className="border-b border-gray-900/10 pb-12 text-white">
+                            <h2 className="text-base font-semibold leading-7 ">Profile</h2>
+                            <p className="mt-1 text-sm leading-6 ">
                                 This information will be displayed publicly so be careful what you share.
                             </p>
 
@@ -21,7 +22,7 @@ export function Contact() {
                         </div>
                         <div className=" grid grid-rows-3 text-center h-full ">
                             <div className="">
-                                <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="username" className="block text-sm font-medium leading-6 ">
                                     Nombre
                                 </label>
                                 <div className="flex justify-center">
@@ -38,7 +39,7 @@ export function Contact() {
 
                             </div>
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="email" className="block text-sm font-medium leading-6 ">
                                     Direccion de correo
                                 </label>
                                 <div className="mt-2">
@@ -53,7 +54,7 @@ export function Contact() {
                                 </div>
                             </div>
                             <div className="">
-                                <label htmlFor="about" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="about" className="block text-sm font-medium leading-6 ">
                                     About
                                 </label>
                                 <div className="mt-2">
