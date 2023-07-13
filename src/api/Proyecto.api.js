@@ -13,3 +13,10 @@ export const getProyecto = (slug) =>{
     
 
 }
+
+export const getAllProyectosDos = () =>{
+    
+    return axios.get('http://padillacode.pythonanywhere.com/api/blog/list')
+    
+
+}
