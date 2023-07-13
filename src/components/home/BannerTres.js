@@ -35,7 +35,7 @@ export function BannerTres() {
                     {/* Realizar un fondo transparente */}
                     <div className="w-full h-full bg-white bg-opacity-10 border border-none p-4 backdrop-blur-3xl rounded-3xl flex flex-col justify-center">
                         <h2 className="md:text-[6rem] text-4xl text-[#38A2D7] md:pb-10 pb-2 font-bold uppercase">
-                            Padilla<span className="text-[#b93e86] uppercase">ia</span>
+                            Padillas<span className="text-[#b93e86] uppercase">ia</span>
                         </h2>
                         <h3 className="md:text-[6rem] text-4xl text-[#38A2D7] md:pb-10 pb-5 font-bold uppercase">Solutions</h3>
                         <p className="md:text-[1.5rem] text-sm text-white ">
