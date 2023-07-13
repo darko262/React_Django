@@ -2,13 +2,13 @@ import axios from 'axios'
 
 export const getAllProyectos = () =>{
     
-    return axios.get('http://padillacode.pythonanywhere.com/api/blog/list')
+    return axios.get('https://padillacode.pythonanywhere.com/api/blog/list')
     
 
 }
 export const getProyecto = (slug) =>{
     const parametro = slug.slug
-    return axios.get(`http://padillacode.pythonanywhere.com/api/blog/detail/${parametro}`)
+    return axios.get(`https://padillacode.pythonanywhere.com/api/blog/detail/${parametro}`)
     
     
 
@@ -16,7 +16,7 @@ export const getProyecto = (slug) =>{
 
 export const getAllProyectosDos = () =>{
     
-    return axios.get('http://padillacode.pythonanywhere.com/api/blog/list')
+    return axios.get('https://padillacode.pythonanywhere.com/api/blog/list')
     
 
 }
