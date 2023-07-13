@@ -5,9 +5,10 @@ import store from "./store";
 import { Provider } from "react-redux";
 import Sobremi from "containers/pages/about";
 import Blog from "containers/pages/blog";
+// bg-[#0C182F]
 function App() {
   return (
-    <div className="bg-[#0C182F]">
+    <div className="bg-black">
     <Provider store={store}>
     <Router>
       <Routes>
