@@ -20,7 +20,7 @@ function Home() {
             <About />
             {/* <Servicios /> */}
             <Recientes />
-            <Referencia />
+            {/* <Referencia /> */}
             <Contact/>
             {/* <section className="section">
                     
