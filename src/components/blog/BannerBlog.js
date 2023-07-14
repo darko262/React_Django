@@ -11,22 +11,28 @@ export function BannerBlog(slug) {
     const [proyect, setProyect] = useState([]);
     const [category, setCategory] = useState([]);
     const [languages, setLanguages] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     // const { category } = proyect; 
 
     useEffect(() => {
-        window.scrollTo(0, 20)
+        window.scrollTo(0, 0)
         async function loadProyectos() {
+            try {
             const res = await getProyecto(slug);
             // console.log(slug);
             setProyect(res.data.post);
 
             setCategory(res.data.post.category);
             setLanguages(res.data.post.languages);
-            console.log(res.data.post.languages)
-
-
-
-
+            setLoading(false);
+            // console.log(res.data.post.languages)
+            
+            } catch (error) {
+                setError(error.message);
+                setLoading(false);
+                
+            }
 
 
         }

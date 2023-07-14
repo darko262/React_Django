@@ -35,7 +35,7 @@ export function BannerTres() {
                     {/* Realizar un fondo transparente */}
                     <div className="w-full h-full bg-white bg-opacity-10 border border-none p-4 backdrop-blur-3xl rounded-3xl flex flex-col justify-center">
                         <h2 className="md:text-[6rem] text-4xl text-[#38A2D7] md:pb-10 pb-2 font-bold uppercase">
-                            Padillas<span className="text-[#b93e86] uppercase">ia</span>
+                            Padilla<span className="text-[#b93e86] uppercase">ia</span>
                         </h2>
                         <h3 className="md:text-[6rem] text-4xl text-[#38A2D7] md:pb-10 pb-5 font-bold uppercase">Solutions</h3>
                         <p className="md:text-[1.5rem] text-sm text-white ">
@@ -49,14 +49,19 @@ export function BannerTres() {
                 </div>
 
 
+                <div className="flex flex-col items-center justify-end h-full w-full">
+                    <div className="lg:h-5/6  h-full">
+                        <img className="h-full w-full object-cover animate-bounce" src={imagent4} alt="" />
+                    </div>
+                </div>
 
-                <div className="flex flex-col relative h-full w-full  border-none  " >
+                {/* <div className="flex flex-col relative h-full w-full  border-none  " >
                     <div className="bg-cover  bg-center  lg:h-3/4 h-full mt-auto    border-none  animate-bounce  z-10 overflow-hidden " style={{ backgroundImage: `url(${imagent4})`, backgroundRepeat: 'no-repeat' }}></div>
                         <div className="absolute flex justify-center  items-end  h-full w-full  blur-3xl ">
                             <div className="absolute  h-4/5  w-4/5 rounded-full bg-gradient-to-r   from-[#38A2D7] to-[#561139] backdrop-brightness-125 backdrop-blur-xl bg-white"></div>
                         </div>
                     
-                </div>
+                </div> */}
 
             </div>
             {/*  */}

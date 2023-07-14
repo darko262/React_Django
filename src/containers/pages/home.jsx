@@ -20,13 +20,13 @@ function Home() {
             <About />
             {/* <Servicios /> */}
             <Recientes />
-            {/* <Referencia /> */}
+            <Referencia />
             <Contact/>
             {/* <section className="section">
                     
                 </section> */}
             {/* <div className="pt-28 lg:pt-0"> */}
-            {/* <Footer /> */}
+            <Footer />
             {/* </div> */}
             {/* </div> */}
         </Layouts>

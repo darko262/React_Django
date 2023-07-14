@@ -38,7 +38,7 @@ export default function Navbar() {
 
     const Cambio = () => {
         return (
-            <div className=" h-22  fixed flex justify-end md:px-14 px-2 bg-transparent md:w-full w-full z-50 items-center transition-all duration-500 ease-in-out">
+            <div className=" h-22  fixed flex justify-end md:px-14 px-2 bg-transparent md:w-full w-full z-50 items-center transition-all duration-500 ease-in-out delay-300">
                 <div className={Navbar ? " h-10 w-10 md:h-16 md:w-16 bg-blue-500  flex items-center justify-center rounded-full transition-all duration-500 ease-in-out":"md:hidden  h-8 w-8 flex items-center justify-center rounded-full transition-all duration-500 ease-in-out"}>
                     
                     <div onClick={handleNav} className="rounded-full   object-contain transition-all duration-500 ease-in-out">
@@ -66,7 +66,7 @@ export default function Navbar() {
 
     return (
         <nav className={Navbar ? (<Cambio />)
-            : ' py-10 shadow-md fixed flex justify-between md:px-14 px-2 bg-transparent md:w-full w-full z-50 items-center transition-all duration-500 ease-in-out '}>
+            : ' py-10 shadow-md fixed flex justify-between md:px-14 px-2 bg-transparent md:w-full w-full z-50 items-center transition-all duration-500 ease-in-out  delay-300'}>
             <Link to={`/`}><a className="text-4xl font-semibold text-white flex justify-center items-center ">PadillaCode.</a></Link>
             <div className="hidden  md:flex md:items-center order-3 md:order-1">
                 <BtnNav text="Home" />
