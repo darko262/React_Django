@@ -2,7 +2,7 @@
 
 import backen from "../../assets/img/otro.jpg"
 import { BoxProyectos } from "components/iconos/BoxProyectos";
-import { getAllProyectos } from "api/Proyecto.api";
+import { getAllProyectos, getAllProyectosDos } from "api/Proyecto.api";
 import { useEffect, useState } from "react";
 import { motion } from 'framer-motion'
 import Fondo from "components/iconos/Fondo";
@@ -33,7 +33,7 @@ export function Recientes() {
     useEffect(() => {
         async function loadProyectos() {
             try {
-                const res = await getAllProyectos();
+                const res = await getAllProyectosDos();
                 setProyect(res.data.results.posts);
                 setLoading(false);
                 console.log(res.data.results.posts);
@@ -47,6 +47,8 @@ export function Recientes() {
 
         loadProyectos();
     }, []);
+
+    
 
     // if (loading) {
     //     return <div>Loading...</div>;
