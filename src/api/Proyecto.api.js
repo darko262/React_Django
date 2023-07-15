@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export const getAllProyectos = () =>{
     
-    return axios.get('https://padillacode.pythonanywhere.com/api/blog/list')
+    return axios.get(`https://padillacode.pythonanywhere.com/api/blog/list`)
     
 
 }
