@@ -26,7 +26,7 @@ export function BannerBlog(slug) {
             setCategory(res.data.post.category);
             setLanguages(res.data.post.languages);
             setLoading(false);
-            // console.log(res.data.post.languages)
+            console.log(res.data.post.languages)
             
             } catch (error) {
                 setError(error.message);

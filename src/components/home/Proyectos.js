@@ -36,10 +36,12 @@ export function Recientes() {
                 const res = await getAllProyectos();
                 setProyect(res.data.results.posts);
                 setLoading(false);
+                console.log(res.data.results.posts);
                
             } catch (error) {
                 setError(error.message);
                 setLoading(false);
+                
             }
         }
 

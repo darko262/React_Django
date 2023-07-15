@@ -1,7 +1,7 @@
 
 // import imagent4 from "../../assets/img/padillacode.png";
-// import imagent4 from "../../assets/img/padillacode2.gif";
-import imagent4 from "../../assets/img/fondo2.svg";
+ import imagent4 from "../../assets/img/padillacode2.gif";
+// import imagent4 from "../../assets/img/fondo2.svg";
 import { BtnSection, BtnSectionAbajo } from "./BtnSection";
 import Typed from 'react-typed';
 
