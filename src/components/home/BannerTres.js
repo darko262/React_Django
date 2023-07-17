@@ -18,7 +18,7 @@ export function BannerTres() {
 
 
 
-        <section className="relative md:h-screen h-screen  ">
+        <section className="relative h-screen  ">
             {/* <h1 className="uppercase text-9xl font-black bg-clip-text text-transparent  justify-center flex w-full absolute top-1/4 z-0 bg-auto bg-top " style={{ backgroundImage: `url(${imagent6})`, backgroundRepeat: 'no-repeat' }}>padillacode</h1> */}
 
             <Fondo posicion={"top-1/2 "} />
