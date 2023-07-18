@@ -1,11 +1,12 @@
 //creacion del componente BannerBlog para mostrar el banner de cada post del blog. 
 import imagent4 from "../../assets/img/terminator3.gif";
-import { getProyecto } from "api/Proyecto.api";
+// import { getProyecto } from "api/Proyecto.api";
 import { BannerPrincipal } from "components/iconos/BannerBlog";
 import { useEffect, useState } from "react";
 import DOMPurify from 'dompurify'
 import python from "../../assets/img/python.png"
 import { IconosProgramacion } from "components/iconos/IconosProgramacion";
+import axios from 'axios';
 
 export function BannerBlog(slug) {
     const [proyect, setProyect] = useState([]);
@@ -19,19 +20,21 @@ export function BannerBlog(slug) {
         window.scrollTo(0, 0)
         async function loadProyectos() {
             try {
-            const res = await getProyecto(slug);
-            // console.log(slug);
-            setProyect(res.data.post);
+                const url = `https://padillacode.pythonanywhere.com/api/blog/detail/${slug}`;
+                const res = await axios.get(url);
 
-            setCategory(res.data.post.category);
-            setLanguages(res.data.post.languages);
-            setLoading(false);
-            console.log(res.data.post.languages)
-            
+                // console.log(slug);
+                setProyect(res.data.post);
+
+                setCategory(res.data.post.category);
+                setLanguages(res.data.post.languages);
+                setLoading(false);
+                console.log(res.data.post.languages)
+
             } catch (error) {
                 setError(error.message);
                 setLoading(false);
-                
+
             }
 
 
@@ -112,7 +115,7 @@ export function BannerBlog(slug) {
                             </div>
                             <h3 className=" text-blue-500 pb-10"> Lenguajes de programacion utilizados:</h3>
                             <div className="min-h-20 lg:h-10 w-full bg-transparent grid grid-cols-6 place-content-center  pb-6">
-                                
+
                                 {languages.map((language) => (
                                     <div className="h-full lg:w-10 w-20 " key={language.id}>
                                         {/* {language.name} */}
