@@ -13,53 +13,71 @@ export function Referencia() {
     const settings = {
         dots: true,
         infinite: true,
-        arrows:true,
+        arrows: true,
         speed: 500,
         slidesToShow: 1,
         adaptiveHeight: false,
         slidesToScroll: 1,
         responsive: [
             {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                arrows:false,
-                dots: true
-              }
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    arrows: false,
+                    dots: true
+                }
             },
             {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 1,
-                arrows:false,
-                dots: false
-              }
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1,
+                    arrows: false,
+                    dots: false
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows:false,
-                dots: false
-              }
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false
+                }
             }
-          ]
-        
-        
+        ]
+
+
 
     };
     return (
         <section className="min-h-screen   py-28 md:py-9 md:w-full w-full lg:py-28">
             <h2 className="text-6xl text-white md:mb-32  mb-12 text-center "> Mis <span className="text-blue-500">Referencias</span></h2>
-            <div className='w-full md:w-2/3 lg:left-64 md:left-36 md:absolute h-full'>
-            <Slider {...settings}>
-                <div>
-                    <div className=" flex justify-center " alt="Slide 1">
+            <div className='  w-3/4 mx-auto h-full'>
+                <Slider {...settings}>
+                    <div>
+                        <div className=" grid grid-cols-1 gap-4" alt="Slide 1">
+                            <div className="  w-full h-full   ">
+                                <FontAwesomeIcon className="text-blue-500 lg:text-6xl text-4xl " icon={faQuoteLeft} />
+                                <p className="text-white relative"> sconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.<FontAwesomeIcon className="text-blue-500 lg:text-5xl md:text-3xl text-2x1 absolute right-0" icon={faQuoteRight} /></p>
+
+                            </div>
+                            <div className="  w-full  h-10  rounded-2xl   justify-center  items-center flex">
+                                <img src={imagent3} className="h-full w-10   bg-gradient-to-b from-slate-500 to-blue-500 rounded-2xl "></img>
+                                <div className='text-white ml-4 '>
+                                <h3 className=' text-white'> Nombre</h3>
+                                <h4 className='' >Empresa</h4>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                        {/* <div className=" flex justify-center " alt="Slide 1">
                         <div className="lg:h-96 lg:w-1/2  w-3/4 relative rounded-2xl "  >
                             <div className=" lg:absolute w-full lg:h-96 lg:w-56 h-44 lg:-left-16 rounded-2xl lg:bg-gradient-to-b lg:from-slate-500 lg:to-blue-500 flex justify-center ">
                                 <img src={imagent3} className="lg:h-72 h-full w-52 lg:absolute lg:top-14 bg-gradient-to-b from-slate-500 to-blue-500 rounded-2xl lg:bg-gradient-to-b lg:from-tranparent lg:to-transparent"></img>
@@ -75,31 +93,31 @@ export function Referencia() {
 
 
                         </div>
+                    </div> */}
                     </div>
-                </div>
-                <div>
-                <div className=" flex justify-center " alt="Slide 1">
-                        <div className="lg:h-96 lg:w-1/2  w-3/4 relative rounded-2xl "  >
-                            <div className=" lg:absolute w-full lg:h-96 lg:w-56 h-44 lg:-left-16 rounded-2xl lg:bg-gradient-to-b lg:from-slate-500 lg:to-blue-500 flex justify-center ">
-                                <img src={imagent3} className="lg:h-72 h-full w-52 lg:absolute lg:top-14 bg-gradient-to-b from-slate-500 to-blue-500 rounded-2xl lg:bg-gradient-to-b lg:from-tranparent lg:to-transparent"></img>
+                    {/* <div>
+                        <div className=" flex justify-center " alt="Slide 1">
+                            <div className="lg:h-96 lg:w-1/2  w-3/4 relative rounded-2xl "  >
+                                <div className=" lg:absolute w-full lg:h-96 lg:w-56 h-44 lg:-left-16 rounded-2xl lg:bg-gradient-to-b lg:from-slate-500 lg:to-blue-500 flex justify-center ">
+                                    <img src={imagent3} className="lg:h-72 h-full w-52 lg:absolute lg:top-14 bg-gradient-to-b from-slate-500 to-blue-500 rounded-2xl lg:bg-gradient-to-b lg:from-tranparent lg:to-transparent"></img>
+
+
+                                </div>
+                                <div className=" lg:absolute lg:left-44 top-0 md:mx-6  w-full h-full   ">
+                                    <FontAwesomeIcon className="text-blue-500 lg:text-6xl text-4xl " icon={faQuoteLeft} />
+                                    <p className="text-white relative"> sconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.<FontAwesomeIcon className="text-blue-500 lg:text-5xl md:text-3xl text-2x1 absolute right-0" icon={faQuoteRight} /></p>
+
+                                </div>
+
 
 
                             </div>
-                            <div className=" lg:absolute lg:left-44 top-0 md:mx-6  w-full h-full   ">
-                                <FontAwesomeIcon className="text-blue-500 lg:text-6xl text-4xl " icon={faQuoteLeft} />
-                                <p className="text-white relative"> sconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.<FontAwesomeIcon className="text-blue-500 lg:text-5xl md:text-3xl text-2x1 absolute right-0" icon={faQuoteRight} /></p>
-                                
-                            </div>
-
-
-
                         </div>
-                    </div>
-                    
-                </div>
+
+                    </div> */}
 
 
-            </Slider>
+                </Slider>
             </div>
 
             {

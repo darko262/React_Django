@@ -4,80 +4,59 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useState, useEffect } from 'react';
 import { BtnSectionAbajo } from "components/home/BtnSection";
 import { Link } from "react-router-dom"
+import Fondo from "components/iconos/Fondo";
+import { useMediaQuery } from '@react-hook/media-query';
+import imagent4 from "assets/img/progfondo2.jpg"
 export default function Navbar() {
     const [nav, setNav] = useState(true)
-    const [Navbar, setNavBar] = useState(false)
+    //     const [Navbar, setNavBar] = useState(false)
 
     const handleNav = () => {
         setNav(!nav)
     }
-    useEffect(() => {
-        let prevScrollPos = window.pageYOffset;
 
-        const handleScroll = () => {
-            const currentScrollPos = window.pageYOffset;
-            const isScrolledDown = prevScrollPos >= 300;
-
-            console.log(isScrolledDown)
-
-            prevScrollPos = currentScrollPos;
-            if (isScrolledDown === true) {
-                setNavBar(true);
-
-            } else {
-                setNavBar(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    const Cambio = () => {
-        return (
-            <div className=" h-22  fixed flex justify-end md:px-14 px-2 bg-transparent md:w-full w-full z-50 items-center transition-all duration-500 ease-in-out delay-300">
-                <div className={Navbar ? " h-10 w-10 md:h-16 md:w-16 bg-blue-500  flex items-center justify-center rounded-full transition-all duration-500 ease-in-out":"md:hidden  h-8 w-8 flex items-center justify-center rounded-full transition-all duration-500 ease-in-out"}>
-                    
+    const isMobile = useMediaQuery('(max-width: 1124px)');
+    return (
+        <div>
+            {isMobile ? (
+                <div className="  fixed flex md:px-14 px-2  w-full  h-24 z-10 items-center   justify-between bg-cover bg-center bg-no-repeat"style={{ backgroundImage: `url(${imagent4})`}}>
+                    <Fondo posicion={" bottom-0 left-1/2  "} />
+                    <Link to={`/`}><a className="text-4xl font-semibold text-white flex justify-center items-center ">PadillaCode.</a></Link>
                     <div onClick={handleNav} className="rounded-full   object-contain transition-all duration-500 ease-in-out">
-                        {!nav ? <AiOutlineClose size={30} color="white" speed={20} className=" object-contain"/> : <AiOutlineMenu  size={30} color="white" />}
+                        {!nav ? <AiOutlineClose size={30} color="white" speed={20} className=" object-contain" /> : <AiOutlineMenu size={30} color="white" />}
                     </div>
-                    <div className={!nav ? "fixed left-0 top-0 w-[80%] lg:w-[60%] h-full border-r rounded-br-[50%] bg-zinc-900 transition-all duration-500 ease-in-out" : "fixed left-[-100%] "}>
-                        <div className="uppercase p-4 grid grid-cols-1 justify-center text-center content-center h-full">
-                            <Link to={`blog/`}><a className="text-4xl font-semibold text-white flex justify-center items-center ">PadillaCode.</a></Link>
-                            <BtnNav text="Home" />
-                            <BtnNav text="Sobre mí" />
-                            <BtnNav text="Servicios" />
-                            <BtnNav text="Contacto" />
-                            <div className="py-10 justify-center w-full flex">
-                                <BtnSectionAbajo />
+                    {!nav && (
+                        <div className="fixed left-0 top-0 w-[80%] lg:w-[60%] h-full border-r rounded-br-[50%] bg-zinc-900 transition-all duration-500 ease-in-out z-10">
+                            <div className="uppercase p-4 grid grid-cols-1 justify-center text-center content-center h-full">
+                                <Link to={`blog/`}><a className="text-4xl font-semibold text-white flex justify-center items-center ">PadillaCode.</a></Link>
+                                <BtnNav text="Home" />
+                                <BtnNav text="Sobre mí" />
                             </div>
                         </div>
-                    </div>
+                    )}
+
                 </div>
-            </div>
-        );
-    };
-    
-    
+            ) : (
+                <div className="  fixed flex md:px-14 px-2  w-full  h-24 z-10 items-center bg-black  justify-between bg-cover bg-center bg-no-repeat"style={{ backgroundImage: `url(${imagent4})`}}>
+                    
+                  
+                    <Link to={`/`}><a className="text-4xl font-semibold text-white flex justify-center items-center ">PadillaCode.</a></Link>
+                    <div className="flex items-center order-1">
+                        <BtnNav text="Home" />
+                        <BtnNav text="Sombre mi" />
+                        <BtnNav text="Servicios" />
+                        <BtnNav text="Contacto" />
+                    </div>
 
 
-    return (
-        <nav className={Navbar ? (<Cambio />)
-            : ' py-10 shadow-md fixed flex justify-between md:px-14 px-2 bg-transparent md:w-full w-full z-50 items-center transition-all duration-500 ease-in-out  delay-300'}>
-            <Link to={`/`}><a className="text-4xl font-semibold text-white flex justify-center items-center ">PadillaCode.</a></Link>
-            <div className="hidden  md:flex md:items-center order-3 md:order-1">
-                <BtnNav text="Home" />
-                <BtnNav text="Sombre mi" />
-                <BtnNav text="Servicios" />
-                <BtnNav text="Contacto" />
-            </div>
-            <Cambio />
-        </nav>
+                </div>
+            )}
+
+
+        </div>
     )
 }
+
 
 // const mapStateToProp = state => ({
 
