@@ -20,7 +20,8 @@ export function BannerBlog(slug) {
         window.scrollTo(0, 0)
         async function loadProyectos() {
             try {
-                const url = `https://padillacode.pythonanywhere.com/api/blog/detail/${slug}`;
+                const parametro = slug.slug
+                const url = `https://padillacode.pythonanywhere.com/api/blog/detail/${parametro}`;
                 const res = await axios.get(url);
 
                 // console.log(slug);
