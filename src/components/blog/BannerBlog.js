@@ -21,7 +21,7 @@ export function BannerBlog(slug) {
         async function loadProyectos() {
             try {
                 const parametro = slug.slug
-                const url = `https://padillacode.pythonanywhere.com/api/blog/detail/fede`;
+                const url = `https://padillacode.pythonanywhere.com/api/blog/detail/${parametro}`;
                 const res = await axios.get(url);
 
                 // console.log(slug);
