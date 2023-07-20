@@ -16,7 +16,7 @@ from django.conf import settings
 
 class ContactCreateView(APIView):
     permission_classes = (permissions.AllowAny,)
-    @csrf_exempt
+    # @csrf_exempt
     def post(self, request, format=None):
         data = self.request.data
 
