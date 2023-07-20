@@ -34,6 +34,7 @@ PROJECT_APPS =[
     'apps.blog',
     'apps.category',
     'apps.language',
+    'apps.contact',
 
 ]
 THIRD_PARTY_APPS = [
@@ -174,3 +175,9 @@ if not DEBUG:
     "default" : env.db("DATABASE_URL"),
     }
     DATABASES["default"]["ATOMIC_REQUESTS"] = True
+    EMAIL_BACKEND='django.core.mail.backends.stmp.EmailBackend'
+
+    EMAIL_HOST= env('EMAIL_HOST')
+    EMAIL_PORT=env('EMAIL_PORT')
+    EMAIL_HOST_USER=env('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD=env('EMAIL_HOST_PASSWORD')
