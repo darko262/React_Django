@@ -2,7 +2,7 @@ from rest_framework import permissions
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-
+from django.views.decorators.csrf import csrf_exempt
 import requests
 
 from .models import Contact
@@ -16,6 +16,7 @@ from django.conf import settings
 
 class ContactCreateView(APIView):
     permission_classes = (permissions.AllowAny,)
+    @csrf_exempt
     def post(self, request, format=None):
         data = self.request.data
 
