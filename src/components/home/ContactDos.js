@@ -57,7 +57,7 @@ export function Contact() {
 
             const fetchData = async () => {
                 // const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact/`, formData, config)
-                const res = await axios.post('https://padillacode.pythonanywhere.com/api/contact/', formData, config)
+                const res = await axios.post('https://padillacode.pythonanywhere.com/', formData, config)
                 if (res.status === 200) {
                     setLoading(false);
                     setFormData({
