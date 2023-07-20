@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 
+
 export function Contact() {
 
 
@@ -40,10 +41,11 @@ export function Contact() {
 
         
             setLoading(true);
-
+            
             const config = {
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    
                 }
             };
 
@@ -56,7 +58,7 @@ export function Contact() {
             
 
             const fetchData = async () => {
-                const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact/`, formData, config)
+                const res = await axios.post(`${process.env.REACT_APP_API_URL}`, formData, config)
                 // const res = await axios.post('https://padillacode.pythonanywhere.com', formData, config)
                 if (res.status === 200) {
                     setLoading(false);
