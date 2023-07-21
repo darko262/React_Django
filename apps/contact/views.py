@@ -31,15 +31,10 @@ class ContactCreateView(APIView):
             email_host_user = os.environ.get('EMAIL_HOST_USER')
             email_host_password = os.environ.get('EMAIL_HOST_PASSWORD')
             send_mail(
-                subject, 
-                'New Client Request: '
-                + '\n\nName: ' + name 
-                + '\nEmail: ' + email
-                + '\n\nMessage:\n' + message
-                + '\nPhone: ' + phone,
-                
-                email_host_user, 
-                ['seba.padilla@live.cl'],
+                subject = '¡Hola desde Django!',
+                message = 'Este es un correo de prueba enviado desde Django.',
+                from_email=email_host_user, 
+                recipient_list=['seba.padilla@live.cl'],
                 fail_silently=False,
                 auth_user=email_host_user,  # Utiliza la variable de entorno para el correo de autenticación
                 auth_password=email_host_password
