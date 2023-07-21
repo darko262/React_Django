@@ -37,16 +37,16 @@ export function Contact() {
                 "X-CSRFToken": csrfToken,
             },
         };
-        const formData = new FormData()
-        formData.append('name', name)
-        formData.append('email', email)
-        formData.append('phone', phone)
-        formData.append('subject', subject)
-        formData.append('message', message)
 
-        
+        const formDataToSend = {
+            name: name,
+            email: email,
+            phone: phone,
+            subject: subject,
+            message: message,
+        };
         const fetchData = async () => {
-            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact/`, formData, config)
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact/`, formDataToSend, config)
             // const res = await axios.post('https://padillacode.pythonanywhere.com', formData, config)
             if (res.status === 200) {
                 setLoading(false);
