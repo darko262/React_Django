@@ -9,44 +9,62 @@ import axios from "axios";
 
 export function Contact() {
 
-    const [loading, setLoading] = useState(false);
+
+
+
+    const [enabled, setEnabled] = useState(false)
+
+    const [loading, setLoading] = useState(false)
+
     const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-        phone: "",
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        phone: '',
+
     });
 
-    const { name, email, subject, message, phone } = formData;
+    const {
+        name,
+        email,
+        subject,
+        message,
+        phone
 
-    const onChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+    } = formData;
 
-    const onSubmit = (e) => {
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(";").shift();
+    }
+    const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    const onSubmit = e => {
         e.preventDefault();
 
+
         setLoading(true);
-
-        // Obtener el token CSRF desde las cookies
         const csrfToken = getCookie("csrftoken");
-
-        // Configurar axios para incluir el token CSRF en la solicitud
         const config = {
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
                 "X-CSRFToken": csrfToken,
-            },
+
+            }
         };
 
-        const formDataToSend = {
-            name: name,
-            email: email,
-            phone: phone,
-            subject: subject,
-            message: message,
-        };
+        const formData = new FormData()
+        formData.append('name', name)
+        formData.append('email', email)
+        formData.append('phone', phone)
+        formData.append('subject', subject)
+        formData.append('message', message)
+
+
         const fetchData = async () => {
-            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact/`, formDataToSend, config)
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact/`, formData, config)
             // const res = await axios.post('https://padillacode.pythonanywhere.com', formData, config)
             if (res.status === 200) {
                 setLoading(false);
@@ -58,26 +76,16 @@ export function Contact() {
                     phone: '',
 
                 })
-                alert("Message has been sent.");
+                alert('Message has been sent.')
             } else {
                 setLoading(false);
                 alert('Error sending message.')
             }
         }
-
         fetchData()
-    };
 
-    // Función para obtener el valor de una cookie específica por su nombre
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(";").shift();
+
     }
-
-    // ... el resto de tu código ...
-
-
 
     return (
 
