@@ -36,7 +36,7 @@ class ContactCreateView(APIView):
                 + '\n\nMessage:\n' + message
                 + '\nPhone: ' + phone,
                 
-                'seba.padilla@live.cl',
+                'padillaseba06@gmail.com',
                 ['seba.padilla@live.cl'],
                 fail_silently=False
             )
