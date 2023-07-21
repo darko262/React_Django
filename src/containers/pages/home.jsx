@@ -22,7 +22,7 @@ function Home() {
             {/* <Servicios /> */}
             <Recientes />
             <Referencia />
-            <Contact/>
+            {/* <Contact/> */}
             {/* <section className="section">
                     
                 </section> */}
