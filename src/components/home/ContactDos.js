@@ -37,32 +37,35 @@ export function Contact() {
                 "X-CSRFToken": csrfToken,
             },
         };
+        const formData = new FormData()
+        formData.append('name', name)
+        formData.append('email', email)
+        formData.append('phone', phone)
+        formData.append('subject', subject)
+        formData.append('message', message)
 
-        const formDataToSend = {
-            name: name,
-            email: email,
-            phone: phone,
-            subject: subject,
-            message: message,
-        };
-
-        axios
-            .post(`${process.env.REACT_APP_API_URL}/api/contact/`, formDataToSend, config)
-            .then((res) => {
+        
+        const fetchData = async () => {
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact/`, formData, config)
+            // const res = await axios.post('https://padillacode.pythonanywhere.com', formData, config)
+            if (res.status === 200) {
                 setLoading(false);
                 setFormData({
-                    name: "",
-                    email: "",
-                    subject: "",
-                    message: "",
-                    phone: "",
-                });
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: '',
+                    phone: '',
+
+                })
                 alert("Message has been sent.");
-            })
-            .catch((error) => {
+            } else {
                 setLoading(false);
-                alert("Error sending message.");
-            });
+                alert('Error sending message.')
+            }
+        }
+
+        fetchData()
     };
 
     // Función para obtener el valor de una cookie específica por su nombre
