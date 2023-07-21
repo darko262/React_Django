@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.views.decorators.csrf import csrf_exempt , csrf_protect
 import requests
-
+import os
 from .models import Contact
 from django.core.mail import send_mail
 
@@ -28,6 +28,8 @@ class ContactCreateView(APIView):
         
 
         try:
+            email_host_user = os.environ.get('EMAIL_HOST_USER')
+            email_host_password = os.environ.get('EMAIL_HOST_PASSWORD')
             send_mail(
                 subject, 
                 'New Client Request: '
@@ -36,9 +38,12 @@ class ContactCreateView(APIView):
                 + '\n\nMessage:\n' + message
                 + '\nPhone: ' + phone,
                 
-                'padillaseba06@gmail.com',
+                email_host_user, 
                 ['seba.padilla@live.cl'],
-                fail_silently=False
+                fail_silently=False,
+                auth_user=email_host_user,  # Utiliza la variable de entorno para el correo de autenticación
+                auth_password=email_host_password
+
             )
 
             Contact.objects.create(
