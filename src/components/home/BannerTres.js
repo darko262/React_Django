@@ -4,7 +4,7 @@
 import imagent4 from "../../assets/img/cerebro.png";
 import imagent5 from "../../assets/img/progfondo.jpg";
 import imagent6 from "../../assets/img/bg-circu.jpg";
-import { BtnSection, BtnSectionAbajo } from "./BtnSection";
+import { BtnSectionAbajoGray } from "components/iconos/IconosProgramacion";
 import Typed from 'react-typed';
 
 import { motion } from 'framer-motion'
@@ -20,14 +20,17 @@ export function BannerTres() {
             <div className="flex lg:flex-row flex-col w-full  lg:h-full min-h-screen  ">
                 <div className="w-full flex flex-col justify-center items-center  lg:h-2/3 h-full lg:my-auto  md:mt-48 mt-32 text-center px-9  z-[1] ">
 
-                    <div className="w-full h-full bg-white bg-opacity-10 border border-none p-4 backdrop-blur-3xl rounded-3xl flex flex-col justify-center">
-                        <h2 className="md:text-[6rem] text-4xl text-[#38A2D7] md:pb-10 pb-2 font-bold uppercase">
-                            Padilla<span className="text-[#b93e86] uppercase">ia</span>
+                    <div className="w-full h-full bg-white bg-opacity-10 border border-none p-4 backdrop-blur-3xl rounded-3xl flex flex-col justify-center ">
+                        <h2 className="md:text-[4rem] text-[2rem] bg-clip-text text-transparent bg-gradient-to-r from-[#043d5a] to-[#38A2D7]  font-bold uppercase">
+                            Padilla <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 uppercase">ia</span>
                         </h2>
-                        <h3 className="md:text-[6rem] text-4xl text-[#38A2D7] md:pb-10 pb-5 font-bold uppercase">Solutions</h3>
-                        <p className="md:text-[1.5rem] text-sm text-white ">
+                        <h3 className="md:text-[4rem] text-[2rem] bg-clip-text text-transparent bg-gradient-to-r from-[#38A2D7] to-[#043d5a]  font-bold uppercase">Solutions</h3>
+                        <p className="text-[1.5rem]  text-white ">
                             Programación y Soluciones de Inteligencia Artificial para Mejorar tu Presencia Digital.
                         </p>
+                        <div className="w-4/5 mx-auto   ">
+                            <BtnSectionAbajoGray />
+                        </div>
 
                     </div>
                 </div>

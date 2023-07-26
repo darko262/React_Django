@@ -6,9 +6,13 @@ import { Provider } from "react-redux";
 import Sobremi from "containers/pages/about";
 import Blog from "containers/pages/blog";
 // bg-[#0C182F]
+import imagent4 from "assets/img/fondo2.svg"
 function App() {
+  
+
   return (
-    <div className="bg-black">
+    
+    <div className="bg-contain bg-center " style={{ backgroundImage: `url(${imagent4})`}}>
     <Provider store={store}>
     <Router>
       <Routes>

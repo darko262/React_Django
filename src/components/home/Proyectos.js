@@ -64,16 +64,16 @@ export function Recientes() {
 
 
     return (
-        <section className="w-auto min-h-screen  md:px-20 relative ">
-            <Fondo posicion={"top-1/2  "} />
-            <Fondo posicion={" right-0"} />
-            <motion.div className="container z-10 "
+        <section className=" w-5/6 min-h-screen  mx-auto   ">
+            {/* <Fondo posicion={"top-1/2  "} /> */}
+            {/* <Fondo posicion={" right-0"} /> */}
+            <motion.div className="container "
             >
                 <h2 className="text-center text-3xl md:text-6xl text-white mb-7">
                     Proyectos <span className="text-blue-500">Recientes</span>
 
                 </h2>
-                <motion.div className="lg:flex lg:flex-row lg:w-full lg:flex-wrap lg:h-full lg:justify-center z-10 "
+                <motion.div className="  xl:flex xl:flex-row xl:w-full xl:flex-wrap xl:h-full xl:justify-center z-10 "
                 >
                     {proyect.map(post => (
                         <motion.div key={post.id}
@@ -82,6 +82,7 @@ export function Recientes() {
                             whileInView={{ opacity: 1, scale: 1 }} >
 
                             <BoxProyectos titulo={post.title} logo={post.thumbnail} parrafo={post.description} slug={post.slug} lenguaje={post.languages.map(language => language.name)} />
+                            {/* <BoxProyectos titulo={post.title} logo={post.thumbnail} parrafo={post.description} slug={post.slug} lenguaje={post.languages.map(language => language.name)} /> */}
                             {/* <BoxProyectos titulo={post.title} logo={backen} parrafo={post.description} slug={post.slug}  lenguaje={[post.languages.name]}/> */}
 
                         </motion.div>

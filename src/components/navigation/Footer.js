@@ -3,20 +3,22 @@ import { BtnSectionAbajo } from "components/home/BtnSection";
 import { connect } from "react-redux";
 import { BtnNav } from "./BtnNav";
 import Fondo from "components/iconos/Fondo";
+import imagent4 from "assets/img/declinado.svg"
+import imagent5 from "assets/img/cognibot2.png"
 
 function Footer() {
     return (
-        <section className="h-96 w-full grid place-items-center relative ">
-            <Fondo posicion={" bottom-0 left-1/2  "} />
-            <div className=" h-1/2  grid grid-cols-3 ">
-                <div className="  grid place-items-center  ">
-                    <div className="w-full  grid place-items-center lg:justify-end  ">
-                        <h3 className="text-4x1 font-semibold text-white ">PadillaCode.</h3>
+        <section className="h-96 w-full grid place-items-center relative bg-no-repeat bg-cover bg-left" style={{ backgroundImage: `url(${imagent4})` }}>
+            {/* <Fondo posicion={" bottom-0 left-1/2  "} /> */}
+            <div className="  grid grid-cols-3 ">
+                <div className="  grid ">
+                    <div className="w-full  grid h-auto place-items-center ">
+                        <a href="#" className=" md:h-1/2 md:w-1/2 flex object-contain"> <img src={imagent5} className=" h-auto w-auto mx-auto"></img></a>
                     </div>
 
                 </div>
                 <div className=" grid place-items-center justify-start">
-                    <div className="lg:h-32 h-full w-full border-l-8 grid lg:grid-cols-4 grid-flow-row border-l-blue-500 place-items-center ">
+                    <div className="lg:h-32 h-full w-full border-l-8 grid lg:grid-cols-2 grid-flow-row border-l-blue-500 place-items-center ">
                         <BtnNav text="Home" />
                         <BtnNav text="Sombre mi" />
                         <BtnNav text="Servicios" />
