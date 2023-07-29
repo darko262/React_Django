@@ -19,7 +19,7 @@ from django.conf import settings
 class ContactCreateView(APIView):
     permission_classes = (permissions.AllowAny,)
     @csrf_protect
-    def post(self, request):
+    def post(self, request, format=None):
         serializers = ContactSerializer(data=request.data)
         if serializers.is_valid(raise_exception=True):
                serializers.save()
