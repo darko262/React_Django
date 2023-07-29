@@ -63,6 +63,8 @@ export function Contactoss() {
         const fetchData = async () => {
             const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact/posts`, formData, config)
             // const res = await axios.post('https://padillacode.pythonanywhere.com', formData, config)
+            console.log(res.data);
+            console.log(res.status);
             if (res.status === 200) {
                 setLoading(false);
                 setFormData({
@@ -72,7 +74,9 @@ export function Contactoss() {
                     message: '',
                     phone: '',
 
+                    
                 })
+                
                 alert('Message has been sent.')
             } else {
                 setLoading(false);
