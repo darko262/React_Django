@@ -13,13 +13,7 @@ export function Contactoss() {
     });
 
     const { name, email, message } = formData;
-    const config = {
-        headers: {
-            'Content-Type': 'application/json',
-            
-
-        }
-    };
+    
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -31,7 +25,7 @@ export function Contactoss() {
             const response = await axios.post(
                 `${process.env.REACT_APP_API_URL}/api/contact/posts`,
                 formData,
-                config
+                
             );
             console.log(response.data); // Muestra la respuesta del servidor
             alert('El formulario se ha enviado correctamente.');
