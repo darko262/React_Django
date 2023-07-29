@@ -6,7 +6,8 @@ from django.views.decorators.csrf import csrf_exempt , csrf_protect
 import requests
 import os
 from .models import Contact
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
+
 
 from django.conf import settings
 # activecampaign_url = settings.ACTIVE_CAMPAIGN_URL
@@ -20,26 +21,37 @@ class ContactCreateView(APIView):
     def post(self, request, format=None):
         data = self.request.data
 
-        name = data['name']
-        email = data['email']
-        subject = data['subject']
-        message = data['message']
-        phone = data['phone']
+        name = data.POST.get('name','')
+        email = data.POST.get('email','')
+        subject = data.POST.get('subject','')
+        message = data.POST.get('message','')
+        phone = data.POST.get('phone','')
+        # email = data['email']
+        # subject = data['subject']
+        # message = data['message']
+        # phone = data['phone']
         
+        email = EmailMessage(
+            "envio el siguiente email"
+            "De {} {} \n\n {} {} {} ".format(name,email,subject,message,phone),
+            "padillaseba06@gmail.com",
+            ["seba.padilla@live.cl"],
+            reply_to=[email]
 
+        )
         try:
-            
-            send_mail(
-                subject, 
-                'New Client Request: '
-                + '\n\nName: ' + name 
-                + '\nEmail: ' + email
-                + '\n\nMessage:\n' + message
-                + '\nPhone: ' + phone,
-                'padillaseba06@gmail.com',
-                ['seba.padilla@live.cl'],
-                fail_silently=False
-            )
+            email.send()
+            # send_mail(
+            #     subject, 
+            #     'New Client Request: '
+            #     + '\n\nName: ' + name 
+            #     + '\nEmail: ' + email
+            #     + '\n\nMessage:\n' + message
+            #     + '\nPhone: ' + phone,
+            #     'padillaseba06@gmail.com',
+            #     ['seba.padilla@live.cl'],
+            #     fail_silently=False
+            # )
 
             Contact.objects.create(
                 name=name,
