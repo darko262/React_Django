@@ -42,12 +42,12 @@ export default function Navbar() {
                 <nav className="  fixed flex md:px-14 px-2  w-full  h-24 z-10 items-center justify-between bg-cover bg-center bg-no-repeat"style={{ backgroundImage: `url(${imagent4})`}}>
                     
                   
-                    <a href="#" className=" h-full flex object-contain"> <img src={imagent5} className=" h-auto w-full "></img></a>
+                    <a href="/" className=" h-full flex object-contain"> <img src={imagent5} className=" h-full w-full "></img></a>
                     <div className="flex items-center order-1">
                         <BtnNav text="Home" />
                         <BtnNav text="Sombre mi" />
                         <BtnNav text="Servicios" />
-                        <BtnNav text="Contacto" />
+                        <BtnNav text="contact" />
                     </div>
 
 

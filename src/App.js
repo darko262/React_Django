@@ -7,6 +7,7 @@ import Sobremi from "containers/pages/about";
 import Blog from "containers/pages/blog";
 // bg-[#0C182F]
 import imagent4 from "assets/img/fondo2.svg"
+import Contacto from "containers/pages/contacto";
 function App() {
   
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/about" element={<Sobremi/>}></Route>
         <Route path="/blog/:slug" element={<Blog />}></Route>
+        <Route path="/contact" element={<Contacto />}></Route>
       </Routes>
     </Router>
     </Provider>
