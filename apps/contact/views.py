@@ -5,9 +5,9 @@ from rest_framework import status
 from django.views.decorators.csrf import csrf_exempt , csrf_protect
 import requests
 import os
-from .models import Contact
+from .models import *
 from django.core.mail import send_mail, EmailMessage
-from serializers import *
+from  .serializers import *
 
 
 from django.conf import settings
@@ -20,9 +20,10 @@ class ContactCreateView(APIView):
     permission_classes = (permissions.AllowAny,)
     @csrf_protect
     def post(self, request):
-            serializers = ContactSerializer(data=request.data)
-            if serializers.is_valid(raise_exception=True):
-                   serializers.save()
+        serializers = ContactSerializer(data=request.data)
+        if serializers.is_valid(raise_exception=True):
+               serializers.save()
+        return Response(serializers.data)
     # def post(self, request, format=None):
     #     data = self.request.data
 
@@ -67,7 +68,7 @@ class ContactCreateView(APIView):
                 
     #         )
             
-            return Response(serializers.data)
+          
 
 
 
