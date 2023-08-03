@@ -163,21 +163,16 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST_DEV')
 # CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS_DEV')
 CSRF_TRUSTED_ORIGINS = ['localhost:8000']
-# EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+
 
 if not DEBUG:
     ALLOWED_HOSTS=env.list('ALLOWED_HOST_DEPLOY')
     # CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST_DEPLOY')
     CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS_DEPLOY')
     CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS_DEPLOY')
-    # EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_HOST= 'smtp.gmail.com'
-    EMAIL_PORT=587
-    EMAIL_HOST_USER='padillaseba06@gmail.com'
-    EMAIL_HOST_PASSWORD='dnpjxhutiwaieiwe'
-    DEFAULT_FROM_EMAIL = 'padillaseba06@gmail.com'
-    EMAIL_USE_TLS = True
+    EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+  
     
     # CORS_ALLOW_ALL_ORIGINS = True
     DATABASES = {
@@ -185,12 +180,12 @@ if not DEBUG:
     }
     DATABASES["default"]["ATOMIC_REQUESTS"] = True
     
-    # EMAIL_HOST= env('EMAIL_HOST')
-    # EMAIL_PORT=env('EMAIL_PORT')
-    # EMAIL_HOST_USER=env('EMAIL_HOST_USER')
-    # EMAIL_HOST_PASSWORD=env('EMAIL_HOST_PASSWORD')
-    # DEFAULT_FROM_EMAIL =env('DEFAULT_FROM_EMAIL')
-    # EMAIL_USE_TLS= True
+    EMAIL_HOST= env('EMAIL_HOST')
+    EMAIL_PORT=env('EMAIL_PORT')
+    EMAIL_HOST_USER=env('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD=env('EMAIL_HOST_PASSWORD')
+    DEFAULT_FROM_EMAIL =env('DEFAULT_FROM_EMAIL')
+    EMAIL_USE_TLS= True
     # EMAIL_HOST = os.environ.get('EMAIL_HOST')
     # EMAIL_PORT = os.environ.get('EMAIL_PORT')
     # EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
