@@ -19,10 +19,10 @@ function Footer() {
                 </div>
                 <div className=" grid place-items-center justify-start">
                     <div className="lg:h-32 h-full w-full border-l-8 grid lg:grid-cols-2 grid-flow-row border-l-blue-500 place-items-center ">
-                        <BtnNav text="Home" />
-                        <BtnNav text="Sombre mi" />
-                        <BtnNav text="Servicios" />
-                        <BtnNav text="Contacto" />
+                        <BtnNav text="Home" ruta="" />
+                        <BtnNav text="Nosotros" ruta="about" />
+                        <BtnNav text="Servicios" ruta="service" />
+                        <BtnNav text="contacto" ruta="contact"/>
                     </div>
 
                 </div>

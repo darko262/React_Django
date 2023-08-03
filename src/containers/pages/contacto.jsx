@@ -12,10 +12,10 @@ function Contacto() {
     return (
         
         <Layouts>
-            {/* <Navbar /> */}
+            <Navbar />
             <Contactoss/>
             
-            {/* <Footer /> */}
+            <Footer />
             
             {/* </div> */}
         </Layouts>

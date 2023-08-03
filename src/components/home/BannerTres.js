@@ -1,17 +1,22 @@
 
 // import imagent4 from "../../assets/img/padillacode.png";
 // import imagent4 from "../../assets/img/padillacode2.gif";
-import imagent4 from "../../assets/img/cerebro.png";
+import imagent4 from "../../assets/img/cerebrMejor.webp";
 import imagent5 from "../../assets/img/progfondo.jpg";
 import imagent6 from "../../assets/img/bg-circu.jpg";
 import { BtnSectionAbajoGray } from "components/iconos/IconosProgramacion";
 import Typed from 'react-typed';
+import { useEffect } from "react";
 
 import { motion } from 'framer-motion'
 import Fondo from "components/iconos/Fondo";
 
 
 export function BannerTres() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        })
+    
 
 
     return (
@@ -22,7 +27,7 @@ export function BannerTres() {
 
                     <div className="w-full h-full bg-white bg-opacity-10 border border-none p-4 backdrop-blur-3xl rounded-3xl flex flex-col justify-center ">
                         <h2 className="md:text-[4rem] text-[2rem] bg-clip-text text-transparent bg-gradient-to-r from-[#043d5a] to-[#38A2D7]  font-bold uppercase">
-                            Padilla <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 uppercase">ia</span>
+                            Cogni <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 uppercase">bot</span>
                         </h2>
                         <h3 className="md:text-[4rem] text-[2rem] bg-clip-text text-transparent bg-gradient-to-r from-[#38A2D7] to-[#043d5a]  font-bold uppercase">Solutions</h3>
                         <p className="text-[1.5rem]  text-white ">

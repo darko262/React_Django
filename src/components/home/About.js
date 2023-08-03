@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 export function About() {
     return (
-        <section className=" relative sm:pb-8 min-h-screen   py-4 ">
+        <section className=" relative sm:pb-8 min-h-screen   py-4 " id="service">
 
             {/* <div className="absolute top-1/2 h-56 w-56  blur-3xl">
                 <div className=" h-52 w-52 rounded-full bg-gradient-to-r from-[#32c061] to-[#0b3d04] backdrop-brightness-125 backdrop-blur-xl -z-10"></div>
