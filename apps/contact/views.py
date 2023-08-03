@@ -24,6 +24,7 @@ class ContactCreateView(APIView):
         message = data['message']
         phone = data['phone']
         correo= settings.EMAIL_HOST_USER
+        correoEnviar=['seba.padilla@live.cl','s.padilla01@ufromail.cl','padillaseba06@gmai.com']
         if request.method == 'POST':
             metodo= "esto es post"
        
@@ -46,7 +47,7 @@ class ContactCreateView(APIView):
                 + '\n\nMessage:\n' + message
                 + '\nPhone: ' + phone,
                 correo,
-                ['seba.padilla@live.cl','s.padilla01@ufromail.cl','padillaseba06@gmai.com'],
+                correoEnviar,
                 fail_silently=False
             )
 
@@ -57,9 +58,9 @@ class ContactCreateView(APIView):
             #     subject=subject,
             #     message=message,
             # )
-            return Response({'status': 'success', 'message': 'Message sent successfully','data':correo , 'metodo':metodo})
+            return Response({'status': 'success', 'message': 'Message sent successfully','data':correo , 'metodo':metodo , 'correos':correoEnviar})
         except:
-            return Response({'status': 'error', 'message': 'Message not sent','data':correo, 'metodo':metodo})
+            return Response({'status': 'error', 'message': 'Message not sent','data':correo, 'metodo':metodo, 'correos':correoEnviar})
 
             
           
