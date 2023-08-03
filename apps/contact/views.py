@@ -24,12 +24,13 @@ class ContactCreateView(APIView):
         try:
             # email2.fail_silently=False
             # email2.send()
-            email_subject = 'sdsada'
-            email_body = 'New Client Request:'
+            email_subject = "envio el siguiente email"
+            email_body = "De {} {} \n\n {} {} {} ".format(name,email,subject,message,phone)
             from_email = 'padillaseba06@gmail.com'
             to_email_list = ['seba.padilla@live.cl', 's.padilla01@ufromail.cl']
 
             email = EmailMessage(email_subject, email_body, from_email, to_email_list)
+            email.fail_silently=False
             email.send()
             # send_mail(
             #     subject, 
