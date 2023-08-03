@@ -24,8 +24,8 @@ class ContactCreateView(APIView):
         try:
             # email2.fail_silently=False
             # email2.send()
-            email_subject = subject
-            email_body = f'New Client Request:\n\nName: {name}\nEmail: {email}\n\nMessage:\n{message}\nPhone: {phone}'
+            email_subject = 'sdsada'
+            email_body = 'New Client Request:'
             from_email = 'padillaseba06@gmail.com'
             to_email_list = ['seba.padilla@live.cl', 's.padilla01@ufromail.cl']
 
