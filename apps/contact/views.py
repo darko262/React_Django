@@ -8,11 +8,11 @@ class ContactCreateView(APIView):
     permission_classes = (permissions.AllowAny,)
 
     def post(self, request, format=None):
-        name = request.data.get('name')
-        email = request.data.get('email')
-        subject = request.data.get('subject')
-        message = request.data.get('message')
-        phone = request.data.get('phone')
+        name = request.data.get('name', "")
+        email = request.data.get('email', "")
+        subject = request.data.get('subject', "")
+        message = request.data.get('message', "")
+        phone = request.data.get('phone', "")
 
         try:
             send_mail(
@@ -21,8 +21,8 @@ class ContactCreateView(APIView):
                 + '\nEmail: ' + email
                 + '\n\nMessage:\n' + message
                 + '\nPhone: ' + phone,
-                'padillaseba06@gmail.com',
-                ['seba.padilla@live.cl'],
+                'padillaseba06@cognibot.com',
+                ['seba.padilla@live.cl','s.padilla01@ufromail.cl'],
                 fail_silently=False
             )
 
@@ -33,9 +33,9 @@ class ContactCreateView(APIView):
                 subject=subject,
                 message=message,
             )
-            return Response({'success': 'Message sent successfully'})
+            return Response({'status': 'success', 'message': 'Message sent successfully'})
         except:
-            return Response({'error': 'Message not sent'})
+            return Response({'status': 'error', 'message': 'Message not sent'})
 
             
           
