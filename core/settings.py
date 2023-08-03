@@ -16,7 +16,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = os.environ.get('DEBUG')
-DEBUG = False
+DEBUG = os.environ.get('DEBUG')
 
 
 ALLOWED_HOSTS =env.list('ALLOWED_HOST_DEV')
@@ -166,11 +166,11 @@ CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST_DEV')
 # CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS_DEV')
 CSRF_TRUSTED_ORIGINS = ['localhost:8000']
 # EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
-# EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
 
 
-if DEBUG == False:
+if not DEBUG:
     ALLOWED_HOSTS=env.list('ALLOWED_HOST_DEPLOY')
     # CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST_DEPLOY')
     CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS_DEPLOY')
