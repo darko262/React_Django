@@ -9,11 +9,11 @@ class ContactCreateView(APIView):
     permission_classes = (permissions.AllowAny,)
 
     def post(self, request, format=None):
-        name = request.data.get('name')
-        email = request.data.get('email')
-        subject = request.data.get('subject')
-        message = request.data.get('message')
-        phone = request.data.get('phone')
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']
+        phone = request.POST['phone']
         # email2 = EmailMessage(
         #     "envio el siguiente email"
         #     "De {} {} \n\n {} {} {} ".format(name,email,subject,message,phone),
@@ -27,10 +27,9 @@ class ContactCreateView(APIView):
             email_subject = "envio el siguiente email"
             email_body = "De {} {} \n\n {} {} {} ".format(name,email,subject,message,phone)
             from_email = 'padillaseba06@gmail.com'
-            to_email_list = ['seba.padilla@live.cl', 's.padilla01@ufromail.cl']
+            to_email_list = 'seba.padilla@live.cl'
 
-            email = EmailMessage(email_subject, email_body, from_email, to_email_list)
-            email.fail_silently=False
+            email = EmailMessage(email_subject, email_body, from_email, to=[to_email_list])
             email.send()
             # send_mail(
             #     subject, 
