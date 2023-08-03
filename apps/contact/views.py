@@ -4,16 +4,18 @@ from rest_framework import permissions
 from django.core.mail import send_mail, EmailMessage
 from .models import Contact
 from django.conf import settings
+from rest_framework.permissions import AllowAny
 
 class ContactCreateView(APIView):
-    permission_classes = (permissions.AllowAny,)
+    permission_classes = [AllowAny]
 
     def post(self, request, format=None):
-        name = request.data.get('name')
-        email = request.data.get('email')
-        subject = request.data.get('subject')
-        message = request.data.get('message')
-        phone = request.data.get('phone')
+        data=request.data
+        name = data['name']
+        email = data['email']
+        subject = data['subject']
+        message = data['message']
+        phone = data['phone']
         # email2 = EmailMessage(
         #     "envio el siguiente email"
         #     "De {} {} \n\n {} {} {} ".format(name,email,subject,message,phone),
@@ -24,31 +26,31 @@ class ContactCreateView(APIView):
         try:
             # email2.fail_silently=False
             # email2.send()
-            email_subject = "envio el siguiente email"
-            email_body = "De {} {} \n\n {} {} {} ".format(name,email,subject,message,phone)
-            from_email = 'padillaseba06@gmail.com'
-            to_email_list = 'seba.padilla@live.cl'
+            # email_subject = "envio el siguiente email"
+            # email_body = "De {} {} \n\n {} {} {} ".format(name,email,subject,message,phone)
+            # from_email = 'padillaseba06@gmail.com'
+            # to_email_list = 'seba.padilla@live.cl'
 
-            email = EmailMessage(email_subject, email_body, from_email, to=[to_email_list])
-            email.send()
-            # send_mail(
-            #     subject, 
-            #     'New Client Request:\n\nName: ' + name 
-            #     + '\nEmail: ' + email
-            #     + '\n\nMessage:\n' + message
-            #     + '\nPhone: ' + phone,
-            #     'padillaseba06@gmail.com',
-            #     ['seba.padilla@live.cl','s.padilla01@ufromail.cl'],
-            #     fail_silently=False
-            # )
-
-            Contact.objects.create(
-                name=name,
-                email=email,
-                phone=phone,
-                subject=subject,
-                message=message,
+            # email = EmailMessage(email_subject, email_body, from_email, to=[to_email_list])
+            # email.send()
+            send_mail(
+                subject, 
+                'New Client Request:\n\nName: ' + name 
+                + '\nEmail: ' + email
+                + '\n\nMessage:\n' + message
+                + '\nPhone: ' + phone,
+                settings.EMAIL_HOST_USER,
+                ['seba.padilla@live.cl','s.padilla01@ufromail.cl'],
+                fail_silently=False
             )
+
+            # Contact.objects.create(
+            #     name=name,
+            #     email=email,
+            #     phone=phone,
+            #     subject=subject,
+            #     message=message,
+            # )
             return Response({'status': 'success', 'message': 'Message sent successfully'})
         except:
             return Response({'status': 'error', 'message': 'Message not sent'})
