@@ -9,13 +9,28 @@ import CircleLoader from "react-spinners/CircleLoader";
 export function Contactoss() {
 
 
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+
+    // }, [])
     useEffect(() => {
+        // Función para obtener el valor de una cookie por su nombre
         window.scrollTo(0, 0)
-    }, [])
+        const getCookie = (name) => {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(";").shift();
+        };
+
+        // Obtener el token CSRF desde la cookie
+        const token = getCookie("csrftoken");
+        setCsrfToken(token);
+    }, []);
 
     const [enabled, setEnabled] = useState(false)
 
     const [loading, setLoading] = useState(false)
+    const [csrfToken, setCsrfToken] = useState("");
 
     const [formData, setFormData] = useState({
         name: '',
@@ -23,7 +38,7 @@ export function Contactoss() {
         subject: '',
         message: '',
         phone: '',
-        
+
     });
 
     const {
@@ -44,7 +59,8 @@ export function Contactoss() {
 
             const config = {
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    "X-CSRFToken": csrfToken,
                 }
             };
 
@@ -54,7 +70,7 @@ export function Contactoss() {
             formData.append('phone', phone)
             formData.append('subject', subject)
             formData.append('message', message)
-            
+
 
             const fetchData = async () => {
                 const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact/`, formData, config)
@@ -66,7 +82,7 @@ export function Contactoss() {
                         subject: '',
                         message: '',
                         phone: '',
-                       
+
                     })
                     alert('Message has been sent.')
                 } else {
@@ -108,14 +124,14 @@ export function Contactoss() {
                                 <div className="mt-6">
                                     <dt className="sr-only">Phone number</dt>
                                     <dd className="flex">
-                                        
+
                                         <span className="ml-3">+1 (555) 123-4567</span>
                                     </dd>
                                 </div>
                                 <div className="mt-3">
                                     <dt className="sr-only">Email</dt>
                                     <dd className="flex">
-                                    
+
                                         <span className="ml-3">support@example.com</span>
                                     </dd>
                                 </div>
@@ -216,7 +232,7 @@ export function Contactoss() {
                                     />
                                 </div>
 
-                                
+
                                 <div className="px-4 py-5 sm:px-6">
                                     <div className="-ml-4 -mt-2 flex flex-wrap items-center justify-between sm:flex-nowrap">
                                         <div className="grid-cols-12 ml-4 mt-2 flex">
@@ -250,7 +266,7 @@ export function Contactoss() {
                                                         type="submit"
                                                         className="relative inline-flex items-center rounded-md border border-transparent bg-orange-600 px-4 py-3 text-lg font-medium text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
                                                     >
-                                                        Send Message
+                                                        Enviar mensaje
                                                     </button>
 
                                             }
