@@ -182,7 +182,7 @@ if not DEBUG:
     "default" : env.db("DATABASE_URL"),
     }
     DATABASES["default"]["ATOMIC_REQUESTS"] = True
-    # EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
     
     
 
