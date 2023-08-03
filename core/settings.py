@@ -165,7 +165,7 @@ CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST_DEV')
 # CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS_DEV')
 CSRF_TRUSTED_ORIGINS = ['localhost:8000']
 # EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
-# EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
 
 
