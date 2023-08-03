@@ -8,11 +8,11 @@ class ContactCreateView(APIView):
     permission_classes = (permissions.AllowAny,)
 
     def post(self, request, format=None):
-        name = request.data.get('name', "")
-        email = request.data.get('email', "")
-        subject = request.data.get('subject', "")
-        message = request.data.get('message', "")
-        phone = request.data.get('phone', "")
+        name = request.data.get('name')
+        email = request.data.get('email')
+        subject = request.data.get('subject')
+        message = request.data.get('message')
+        phone = request.data.get('phone')
 
         try:
             send_mail(
@@ -21,7 +21,7 @@ class ContactCreateView(APIView):
                 + '\nEmail: ' + email
                 + '\n\nMessage:\n' + message
                 + '\nPhone: ' + phone,
-                'padillaseba06@cognibot.com',
+                'padillaseba06@gmail.com',
                 ['seba.padilla@live.cl','s.padilla01@ufromail.cl'],
                 fail_silently=False
             )

@@ -74,6 +74,7 @@ export function Contactoss() {
 
             const fetchData = async () => {
                 const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact/`, formData, config)
+                console.log(res.data)
                 if (res.data.status === 'success') {
                     console.log(res.data)
                     setLoading(false);
