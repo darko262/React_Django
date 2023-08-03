@@ -1,8 +1,9 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import permissions
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
 from .models import Contact
+from django.conf import settings
 
 class ContactCreateView(APIView):
     permission_classes = (permissions.AllowAny,)
@@ -13,18 +14,26 @@ class ContactCreateView(APIView):
         subject = request.data.get('subject')
         message = request.data.get('message')
         phone = request.data.get('phone')
-
-        try:
-            send_mail(
-                subject, 
-                'New Client Request:\n\nName: ' + name 
-                + '\nEmail: ' + email
-                + '\n\nMessage:\n' + message
-                + '\nPhone: ' + phone,
-                'padillaseba06@gmail.com',
-                ['seba.padilla@live.cl','s.padilla01@ufromail.cl'],
-                fail_silently=False
+        email2 = EmailMessage(
+            "envio el siguiente email"
+            "De {} {} \n\n {} {} {} ".format(name,email,subject,message,phone),
+            "padillaseba06@gmail.com",
+            ["seba.padilla@live.cl"]
             )
+       
+        try:
+            email2.fail_silently=False
+            email2.send()
+            # send_mail(
+            #     subject, 
+            #     'New Client Request:\n\nName: ' + name 
+            #     + '\nEmail: ' + email
+            #     + '\n\nMessage:\n' + message
+            #     + '\nPhone: ' + phone,
+            #     'padillaseba06@gmail.com',
+            #     ['seba.padilla@live.cl','s.padilla01@ufromail.cl'],
+            #     fail_silently=False
+            # )
 
             Contact.objects.create(
                 name=name,
