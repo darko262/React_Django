@@ -10,12 +10,7 @@ class ContactCreateView(APIView):
     permission_classes = [AllowAny]
 
     def post(self, request, format=None):
-        data=request.data
-        name = data['name']
-        email = data['email']
-        subject = data['subject']
-        message = data['message']
-        phone = data['phone']
+       
         # email2 = EmailMessage(
         #     "envio el siguiente email"
         #     "De {} {} \n\n {} {} {} ".format(name,email,subject,message,phone),
@@ -24,6 +19,12 @@ class ContactCreateView(APIView):
         #     )
        
         try:
+            data=request.data
+            name = data['name']
+            email = data['email']
+            subject = data['subject']
+            message = data['message']
+            phone = data['phone']
             # email2.fail_silently=False
             # email2.send()
             # email_subject = "envio el siguiente email"
