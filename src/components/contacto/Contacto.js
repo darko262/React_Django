@@ -108,41 +108,39 @@ export function Contactoss() {
                 <div className="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
                     <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
                         <div className="mx-auto max-w-lg">
-                            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Get in touch</h2>
-                            <p className="mt-3 text-lg leading-6 text-gray-500">
-                                Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus
-                                arcu.
-                            </p>
-                            <dl className="mt-8 text-base text-gray-500">
-                                <div>
-                                    <dt className="sr-only">Postal address</dt>
-                                    <dd>
-                                        <p>742 Evergreen Terrace</p>
-                                        <p>Springfield, OR 12345</p>
-                                    </dd>
-                                </div>
-                                <div className="mt-6">
-                                    <dt className="sr-only">Phone number</dt>
-                                    <dd className="flex">
+                        <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                                    ¡Descubre nuevas posibilidades conmigo!</h2>
+                                <p className="mt-3 text-lg leading-6 text-gray-500">
+                                    Juntos, crearemos soluciones innovadoras para tu éxito. ¡Contáctame ahora y comencemos a dar vida a tus ideas!
+                                </p>
+                                <dl className="mt-8 text-base text-gray-500">
+                                    <div>
+                                        <dt className="sr-only">Postal address</dt>
+                                        <dd>
 
-                                        <span className="ml-3">+1 (555) 123-4567</span>
-                                    </dd>
-                                </div>
-                                <div className="mt-3">
-                                    <dt className="sr-only">Email</dt>
-                                    <dd className="flex">
+                                            <p>Temuco, Chile</p>
+                                        </dd>
+                                    </div>
+                                    <div className="mt-6">
+                                        <dt className="sr-only">Phone number : </dt>
+                                        <dd className="flex">
+                                            +56988682182
 
-                                        <span className="ml-3">support@example.com</span>
-                                    </dd>
-                                </div>
-                            </dl>
-                            <p className="mt-6 text-base text-gray-500">
-                                Looking for careers?{' '}
-                                <a href="#" className="font-medium text-gray-700 underline">
-                                    View all job openings
-                                </a>
-                                .
-                            </p>
+                                        </dd>
+                                    </div>
+                                    <div className="mt-3">
+                                        <dt className="sr-only">Email</dt>
+                                        <dd className="flex">
+                                            seba.padilla@live.cl
+
+                                        </dd>
+                                    </div>
+                                </dl>
+                                <p className="mt-6 text-base text-gray-500">
+                                    ¡Espero con ansias trabajar contigo en proyectos emocionantes!
+
+
+                                </p>
                         </div>
                     </div>
                     <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
