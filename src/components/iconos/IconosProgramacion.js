@@ -52,15 +52,15 @@ export function BtnSectionAbajoGray() {
     return (
         <div className=' grid grid-cols-3  justify-items-center  gap-3 '>
 
-            <Link to="https://github.com/darko262" className="h-14 ">
-                <FaGithub className="h-full md:w-full w-1/2  fill-sky-800 " />
+            <Link to="https://github.com/darko262" className="h-14  hover:scale-110 transition easy-linear duration-300 delay-50">
+                <FaGithub className="h-full md:w-full w-1/2  fill-sky-800  " />
             </Link>
 
-            <Link to="https://www.linkedin.com/in/sebasti%C3%A1n-padilla-fuentes-21347a246 " className="h-14">
+            <Link to="https://www.linkedin.com/in/sebasti%C3%A1n-padilla-fuentes-21347a246 " className="h-14 hover:scale-110 transition easy-linear duration-300 delay-50">
                 <FaLinkedin className="h-full md:w-full w-1/2  fill-sky-800 " />
             </Link>
 
-            <Link to="/" className="h-14">
+            <Link to="/" className="h-14 hover:scale-110 transition easy-linear duration-300 delay-50">
                 <FaInstagram className="h-full md:w-full w-1/2  fill-sky-800 " />
             </Link>
         </div>

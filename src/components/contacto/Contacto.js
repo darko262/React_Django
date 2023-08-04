@@ -110,39 +110,39 @@ export function Contactoss() {
                 <div className="relative mx-auto max-w-7xl lg:grid lg:grid-cols-5">
                     <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
                         <div className="mx-auto max-w-lg">
-                        <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-                                    ¡Descubre nuevas posibilidades conmigo!</h2>
-                                <p className="mt-3 text-lg leading-6 text-gray-500">
-                                    Juntos, crearemos soluciones innovadoras para tu éxito. ¡Contáctame ahora y comencemos a dar vida a tus ideas!
-                                </p>
-                                <dl className="mt-8 text-base text-gray-500">
-                                    <div>
-                                        <dt className="sr-only">Postal address</dt>
-                                        <dd>
+                            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                                ¡Descubre nuevas posibilidades conmigo!</h2>
+                            <p className="mt-3 text-lg leading-6 text-gray-500">
+                                Juntos, crearemos soluciones innovadoras para tu éxito. ¡Contáctame ahora y comencemos a dar vida a tus ideas!
+                            </p>
+                            <dl className="mt-8 text-base text-gray-500">
+                                <div>
+                                    <dt className="sr-only">Postal address</dt>
+                                    <dd>
 
-                                            <p>Temuco, Chile</p>
-                                        </dd>
-                                    </div>
-                                    <div className="mt-6">
-                                        <dt className="sr-only">Phone number : </dt>
-                                        <dd className="flex">
-                                            +56988682182
+                                        <p>Temuco, Chile</p>
+                                    </dd>
+                                </div>
+                                <div className="mt-6">
+                                    <dt className="sr-only">Phone number : </dt>
+                                    <dd className="flex">
+                                        +56988682182
 
-                                        </dd>
-                                    </div>
-                                    <div className="mt-3">
-                                        <dt className="sr-only">Email</dt>
-                                        <dd className="flex">
-                                            seba.padilla@live.cl
+                                    </dd>
+                                </div>
+                                <div className="mt-3">
+                                    <dt className="sr-only">Email</dt>
+                                    <dd className="flex">
+                                        seba.padilla@live.cl
 
-                                        </dd>
-                                    </div>
-                                </dl>
-                                <p className="mt-6 text-base text-gray-500">
-                                    ¡Espero con ansias trabajar contigo en proyectos emocionantes!
+                                    </dd>
+                                </div>
+                            </dl>
+                            <p className="mt-6 text-base text-gray-500">
+                                ¡Espero con ansias trabajar contigo en proyectos emocionantes!
 
 
-                                </p>
+                            </p>
                         </div>
                     </div>
                     <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
@@ -160,7 +160,7 @@ export function Contactoss() {
                                         onChange={e => onChange(e)}
                                         autoComplete="name"
                                         className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-orange-500 focus:ring-orange-500"
-                                        placeholder="Full name"
+                                        placeholder="Tu Nombre"
                                     />
                                 </div>
 
@@ -194,7 +194,7 @@ export function Contactoss() {
                                             required
                                             onChange={e => onChange(e)}
                                             className="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                                            placeholder="51 999 123 456"
+                                            placeholder="56 987 654 321"
                                             aria-describedby="price-currency"
                                         />
                                     </div>
@@ -211,7 +211,7 @@ export function Contactoss() {
                                         required
                                         onChange={e => onChange(e)}
                                         className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-orange-500 focus:ring-orange-500"
-                                        placeholder="Subject"
+                                        placeholder="Asunto"
                                     />
                                 </div>
 
@@ -227,7 +227,7 @@ export function Contactoss() {
                                         onChange={e => onChange(e)}
                                         rows={4}
                                         className="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-orange-500 focus:ring-orange-500"
-                                        placeholder="Message"
+                                        placeholder="Tu Mensaje"
                                         defaultValue={''}
                                     />
                                 </div>
@@ -248,8 +248,8 @@ export function Contactoss() {
                                     pointer-events-none inline-block h-[28px] w-[28px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
                                                 />
                                             </Switch>
-                                            <p className="col-span-9 ml-4 text-md font-regular leading-6 text-gray-600">
-                                                By selecting this you accept the <span className="text-blue-500"><Link to='/terms'>Terms of service</Link></span> and <span className="text-blue-500"><Link to='/privacy'>Privacy policy</Link></span>.
+                                            <p className="col-span-9 ml-4 text-md font-normal leading-6 text-gray-600">
+                                                Al seleccionar esto, aceptas los <span className="text-blue-500"><Link to='/terms'>Términos de servicio</Link></span> y la <span className="text-blue-500"><Link to='/privacy'>Política de privacidad</Link></span>.
                                             </p>
 
                                         </div>

@@ -7,10 +7,10 @@ import { useEffect, useState } from "react";
 export function BannerAbout() {
     useEffect(() => {
         window.scrollTo(0, 0)
-        })
-    
+    })
+
     return (
-        <section className="  w-11/12 mx-auto lg:h-screen  min-h-screen py-4">
+        <section className="  w-11/12 mx-auto  min-h-screen py-4">
 
             <div className=" grid grid-rows-1  w-full  h-1/2 ">
                 <div className=" flex  justify-center bg-white bg-opacity-10 border border-none p-4 backdrop-blur-3xl  rounded-3xl">
@@ -37,14 +37,32 @@ export function BannerAbout() {
 
                     </div>
                     <div className="h-full w-full   flex items-center justify-center ">
-                        <img src={imagent3} className="h-full w-full md:w-auto rounded-full" alt="Imagen" />
+                        <img src={imagent3} className="lg:h-96 h-full w-full md:w-auto rounded-full" alt="Imagen" />
                     </div>
 
                 </div>
             </div>
-            <div className="h-1/2 md:w-3/4 w-full mx-auto  text-white  py-10">
-               
-                <p>
+            <div className="h-1/2 md:w-3/4 w-full mx-auto  text-white  ">
+                <div class="border-r-indigo-500 border-r-8  border-b-8 border-b-indigo-500 p-8 rounded-sm shadow-md  ">
+                    <p class="text-2xl font-semibold mb-4 text-white">
+                        ¡Hola! 👋 Soy un ingeniero civil electrónico titulado de la Universidad de la Frontera en Temuco, Chile.
+                    </p>
+                    <p class="text-gray-100 mb-4">
+                        Me apasiona la tecnología y tengo experiencia en diversos campos como inteligencia artificial, detección de patrones y programación.
+                    </p>
+                    <p class="text-gray-100 mb-4">
+                        Durante mi carrera académica y profesional, me he enfocado en aplicar mis conocimientos para desarrollar soluciones innovadoras y eficientes. Mi experiencia en inteligencia artificial me ha permitido abordar problemas complejos y encontrar soluciones creativas mediante algoritmos de aprendizaje automático y análisis de datos.
+                    </p>
+                    <p class="text-gray-100 mb-4">
+                        También tengo experiencia en programación web, donde he trabajado en el desarrollo de sitios y aplicaciones interactivas que brindan una experiencia única a los usuarios. Me encanta explorar nuevas tecnologías y tendencias en el ámbito del desarrollo web para mantenerme actualizado y ofrecer soluciones modernas y atractivas.
+                    </p>
+                    <p class="text-gray-100 mb-4">
+                        Como ingeniero, me considero una persona proactiva, orientada a los detalles y apasionada por el aprendizaje continuo. Siempre busco nuevos desafíos y oportunidades para mejorar mis habilidades y conocimientos. ¡Gracias por visitar mi sitio!
+                    </p>
+                </div>
+
+
+                {/* <p>
                 ¡Hola! 👋
 
                 Soy un ingeniero civil electrónico titulado de la Universidad de la Frontera en Temuco, Chile. Me apasiona la tecnología y tengo experiencia en diversos campos como inteligencia artificial, detección de patrones y programación.
@@ -58,7 +76,7 @@ export function BannerAbout() {
     
 
                 ¡Gracias por visitar mi sitio!
-                </p>
+                </p> */}
             </div>
 
 

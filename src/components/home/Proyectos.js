@@ -69,7 +69,7 @@ export function Recientes() {
             {/* <Fondo posicion={" right-0"} /> */}
             <motion.div className="container "
             >
-                <h2 className="text-center text-3xl md:text-6xl text-white mb-7">
+                <h2 className="text-center text-3xl md:text-6xl text-white mb-7 font-mono">
                     Proyectos <span className="text-blue-500">Recientes</span>
 
                 </h2>

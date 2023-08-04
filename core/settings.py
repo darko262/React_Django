@@ -163,9 +163,10 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ]
 }
-CSRF_TRUSTED_ORIGINS = ['padillacode.pythonanywhere.com', 'https://padillacode.pythonanywhere.com']
-CORS_ALLOWED_ORIGINS = ['http://padillacode.pythonanywhere.com', 'https://padillacode.pythonanywhere.com' , ]
+CSRF_TRUSTED_ORIGINS = ['padillacode.pythonanywhere.com', 'https://padillacode.pythonanywhere.com','http://localhost:3000']
+CORS_ALLOWED_ORIGINS = ['http://padillacode.pythonanywhere.com', 'https://padillacode.pythonanywhere.com' ,'http://localhost:3000' ]
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 
 
 

@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons'
-import imagent3 from "../../assets/img/html2.png"
+import imagent3 from "../../assets/img/porta3.webp"
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -55,21 +55,21 @@ export function Referencia() {
     };
     return (
         <section className="h-full  py-28 md:py-9  lg:py-28">
-            <h2 className="text-6xl text-white md:mb-32  mb-12 text-center "> Mis <span className="text-blue-500">Referencias</span></h2>
+            <h2 className="text-3xl md:text-6xl  text-white md:mb-32  mb-12 text-center font-mono "> Experiencias <span className="text-blue-500">Satisfechas</span></h2>
             <div className='  w-3/4 lg:w-2/4 mx-auto h-full'>
                 <Slider {...settings}>
                     <div>
                         <div className=" grid grid-cols-1 gap-4 mx-4" alt="Slide 1">
                             <div className="  w-full h-full   ">
                                 <FontAwesomeIcon className="text-blue-500 lg:text-6xl text-4xl " icon={faQuoteLeft} />
-                                <p className="text-white relative"> sconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.<FontAwesomeIcon className="text-blue-500 lg:text-5xl md:text-3xl text-2x1 absolute right-0" icon={faQuoteRight} /></p>
+                                <p className="text-white relative"> Estamos encantados con la página web creada por tu equipo. Con su atención meticulosa a los detalles, combinada con una excelente ejecución, dio como resultado una plataforma que realmente refleja nuestra visión y valores. ¡Gracias por hacer que nuestra presencia en línea sea excepcional!.<FontAwesomeIcon className="text-blue-500 lg:text-5xl md:text-3xl text-2x1 absolute right-0" icon={faQuoteRight} /></p>
 
                             </div>
                             <div className="  w-full  h-10  rounded-2xl   justify-center  items-center flex">
                                 <img src={imagent3} className="h-full w-10   bg-gradient-to-b from-slate-500 to-blue-500 rounded-2xl "></img>
                                 <div className='text-white ml-4 '>
-                                    <h3 className=' text-white'> Nombre</h3>
-                                    <h4 className='' >Empresa</h4>
+                                    <h3 className=' text-white'> Cecilia Alvarez</h3>
+                                    <h4 className='' >SmartPet</h4>
                                 </div>
 
 
@@ -83,7 +83,7 @@ export function Referencia() {
                             <div className=" grid grid-cols-1 gap-4" alt="Slide 2">
                                 <div className="  w-full h-full   ">
                                     <FontAwesomeIcon className="text-blue-500 lg:text-6xl text-4xl " icon={faQuoteLeft} />
-                                    <p className="text-white relative"> sconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.<FontAwesomeIcon className="text-blue-500 lg:text-5xl md:text-3xl text-2x1 absolute right-0" icon={faQuoteRight} /></p>
+                                    <p className="text-white relative"> "El equipo superó nuestras expectativas con la página web. Su creatividad y profesionalismo se reflejan en cada detalle, desde el diseño hasta la funcionalidad. Estamos emocionados de presentar nuestra marca en esta plataforma de alta calidad. ¡Gran trabajo!.<FontAwesomeIcon className="text-blue-500 lg:text-5xl md:text-3xl text-2x1 absolute right-0" icon={faQuoteRight} /></p>
 
                                 </div>
                                 <div className="  w-full  h-10  rounded-2xl   justify-center  items-center flex">

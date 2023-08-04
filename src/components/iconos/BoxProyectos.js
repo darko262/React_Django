@@ -12,7 +12,7 @@ export function BoxProyectos({ titulo, logo, parrafo, slug, lenguaje, }) {
                     <img src={logo} className=" h-1/2 w-full rounded-3xl ease-in   "></img>
                     <div className=" text-center   h-full w-full  text-blue-500">
                         <h2 className="text-3xl ">{titulo}</h2>
-                        <h4 className="w-full h-full ">We use cookies to ensure that we give you the best experience on our website </h4>
+                        <h4 className="w-full h-full ">{parrafo}</h4>
 
                         <div className="h-1/2 w-full  grid grid-cols-2 gap-4">
                             <div className="flex justify-center items-center">
@@ -42,7 +42,7 @@ export function BoxProyectos({ titulo, logo, parrafo, slug, lenguaje, }) {
                         <div className=" absolute left-0 bottom-0 w-full h-full bg-gradient-to-b from-transparent to-blue-400 rounded-3xl flex justify-center flex-col text-center translate-y-full easy-linear duration-500 md:group-hover:translate-y-0 ">
                             <h2 className="lg:text-4xl text-2xl  ">{titulo}</h2>
 
-                            <h4 className="text-white">u the best experience on our website We use cookies to ensure that we give you the best experience on our website </h4>
+                            <h4 className="text-white">{parrafo} </h4>
 
                             <div className="grid grid-cols-11 place-content-center  absolute bottom-0 pb-6 ">
                                 {lenguaje.map((lenguaje, index) => (

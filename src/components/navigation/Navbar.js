@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 import Fondo from "components/iconos/Fondo";
 import { useMediaQuery } from '@react-hook/media-query';
 import imagent4 from "assets/img/declinado.svg"
-import imagent5 from "assets/img/cognibot2.png"
+import imagent5 from "assets/img/cognibot2.webp"
 export default function Navbar() {
     const baseUrl = window.location.origin;
     const [nav, setNav] = useState(true)
@@ -30,11 +30,11 @@ export default function Navbar() {
                     </div>
                     {!nav && (
                         <div className="fixed left-0 top-0 w-[80%] lg:w-[60%] h-full border-r rounded-br-[50%] transition-all duration-500 ease-in-out z-10 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagent4})` }}>
-                            <div className="uppercase p-4 grid grid-cols-1 justify-center text-center content-center h-full">
-                                <Link to={`blog/`}><a className="text-4xl font-semibold text-white flex justify-center items-center ">PadillaCode.</a></Link>
+                            <div className="uppercase p-4 grid grid-cols-1  text-center content-center h-full justify-items-center">
+                                <a href="/" className=" h-20 w-auto flex object-contain"> <img src={imagent5} className=" h-full w-full "></img></a>
                                 <BtnNav text="Home" ruta="" />
                                 <BtnNav text="Nosotros" ruta="about" />
-                                <BtnNav text="Servicios" ruta="service" />
+                                {/* <BtnNav text="Servicios" ruta="service" /> */}
                                 <BtnNav text="contacto" ruta="contact" />
                             </div>
                         </div>
@@ -45,11 +45,11 @@ export default function Navbar() {
                 <nav className="  fixed flex md:px-14 px-2  w-full  h-24 z-10 items-center justify-between bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagent4})` }}>
 
 
-                    <a href="/" className=" h-full flex object-contain"> <img src={imagent5} className=" h-full w-full "></img></a>
-                    <div className="flex items-center order-1">
+                    <a href="/" className="  h-20 w-auto flex object-contain"> <img src={imagent5} className=" h-full w-full "></img></a>
+                    <div className="flex items-center ">
                         <BtnNav text="Home" ruta="" />
                         <BtnNav text="Nosotros" ruta="about"  />
-                        <BtnNav text="Servicios" ides="service" />
+                        {/* <BtnNav text="Servicios" ides="service" /> */}
                         <BtnNav text="contacto" ruta="contact" />
                     </div>
 

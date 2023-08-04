@@ -14,7 +14,7 @@ export function About() {
 
             </div> */}
             <MuestraIcono />
-            <h2 className=" text-5xl text-center text-white font-mono py-11">Nuestros servicios</h2>
+            <h2 className=" text-3xl md:text-6xl text-center text-white font-mono py-11">Servicios <span className="text-blue-500"> Innovadores</span></h2>
 
             <div className=" w-4/5 mx-auto h-full flex flex-row  flex-wrap  justify-center items-end ">
                 <BoxServiceSombra logo="react" titulo="Sitios Web Personalizados para tu Éxito" parrafo="Creamos sitios web únicos y adaptados a tus necesidades, brindando una experiencia excepcional a tus usuarios. Potencia tu éxito en línea con nuestro desarrollo web a medida." />
