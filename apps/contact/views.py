@@ -10,7 +10,7 @@ class ContactCreateView(APIView):
     permission_classes = [AllowAny]
 
     def post(self, request, format=None):
-       
+
         # email2 = EmailMessage(
         #     "envio el siguiente email"
         #     "De {} {} \n\n {} {} {} ".format(name,email,subject,message,phone),
@@ -23,22 +23,22 @@ class ContactCreateView(APIView):
         subject = data['subject']
         message = data['message']
         phone = data['phone']
-        correo= 'seba.padilla@live.cl'
+        correo= 'padillaseba06@gmail.com'
         # correoEnviar=['seba.padilla@live.cl','s.padilla01@ufromail.cl','padillaseba06@gmai.com']
-        if request.method == 'POST':
-            metodo= "esto es post"
-       
+
+
+
         try:
-            mail_subject= 'Correo Nuevo'
-            body= ({subject, 
-                'New Client Request:\n\nName: ' + name 
-                + '\nEmail: ' + email
-                + '\n\nMessage:\n' + message
-                + '\nPhone: ' + phone,})
-            to_email=correo
-            send_email=EmailMessage(mail_subject,body,to=[to_email])
-            send_email.send()
-            
+            # mail_subject= 'Correo Nuevo'
+            # body= ({subject,
+            #     'New Client Request:\n\nName: ' + name
+            #     + '\nEmail: ' + email
+            #     + '\n\nMessage:\n' + message
+            #     + '\nPhone: ' + phone,})
+            # to_email=correo
+            # send_email=EmailMessage(mail_subject,body,to=[to_email])
+            # send_email.send()
+
             # email2.fail_silently=False
             # email2.send()
             # email_subject = "envio el siguiente email"
@@ -48,16 +48,16 @@ class ContactCreateView(APIView):
 
             # email = EmailMessage(email_subject, email_body, from_email, to=[to_email_list])
             # email.send()
-            # send_mail(
-            #     subject, 
-            #     'New Client Request:\n\nName: ' + name 
-            #     + '\nEmail: ' + email
-            #     + '\n\nMessage:\n' + message
-            #     + '\nPhone: ' + phone,
-            #     correo,
-            #     correoEnviar,
-            #     fail_silently=False
-            # )
+            send_mail(
+                subject,
+                'New Client Request:\n\nName: ' + name
+                + '\nEmail: ' + email
+                + '\n\nMessage:\n' + message
+                + '\nPhone: ' + phone,
+                correo,
+                ['seba.padilla@live.cl','s.padilla01@ufromail.cl'],
+                fail_silently=False
+            )
 
             # Contact.objects.create(
             #     name=name,
@@ -66,12 +66,9 @@ class ContactCreateView(APIView):
             #     subject=subject,
             #     message=message,
             # )
-            return Response({'status': 'success', 'message': 'Message sent successfully','data':body , 'metodo':send_email })
+            return Response({'status': 'success', 'message': 'Message sent successfully'})
         except:
-            return Response({'status': 'error', 'message': 'Message not sent','data':data, 'metodo':metodo })
-
-            
-          
+            return Response({'status': 'error', 'message': 'Message not sent' })
 
 
 

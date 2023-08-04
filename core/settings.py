@@ -4,6 +4,7 @@ import environ
 
 env = environ.Env()
 environ.Env.read_env()
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -16,7 +17,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = os.environ.get('DEBUG')
-DEBUG = os.environ.get('DEBUG')
+DEBUG =config('DEBUG')
 
 
 ALLOWED_HOSTS =env.list('ALLOWED_HOST_DEV')
@@ -171,24 +172,24 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 if not DEBUG:
-    ALLOWED_HOSTS=env.list('ALLOWED_HOST_DEPLOY')
-    # CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST_DEPLOY')
-    CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS_DEPLOY')
-    CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS_DEPLOY')
+    ALLOWED_HOSTS=config.list('ALLOWED_HOST_DEPLOY')
+    # CORS_ORIGIN_WHITELIST = config.list('CORS_ORIGIN_WHITELIST_DEPLOY')
+    CSRF_TRUSTED_ORIGINS = config.list('CSRF_TRUSTED_ORIGINS_DEPLOY')
+    CORS_ALLOWED_ORIGINS = config.list('CORS_ALLOWED_ORIGINS_DEPLOY')
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
     EMAIL_HOST= 'smtp.gmail.com'
     EMAIL_PORT=587
     EMAIL_HOST_USER='padillaseba06@gmail.com'
-    EMAIL_HOST_PASSWORD=env('EMAIL_HOST_PASSWORD')
+    EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL = 'padillaseba06@gmail.com'
     EMAIL_USE_TLS= True
     
-    # CORS_ALLOW_ALL_ORIGINS = True
-    DATABASES = {
-    "default" : env.db("DATABASE_URL"),
-    }
-    DATABASES["default"]["ATOMIC_REQUESTS"] = True
+    # # CORS_ALLOW_ALL_ORIGINS = True
+    # DATABASES = {
+    # "default" : env.db("DATABASE_URL"),
+    # }
+    # DATABASES["default"]["ATOMIC_REQUESTS"] = True
     
     
 
