@@ -1,10 +1,9 @@
 from pathlib import Path
 import os
 import environ
-
+from decouple import config
 env = environ.Env()
 environ.Env.read_env()
-from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -16,11 +15,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = os.environ.get('DEBUG')
-DEBUG =config('DEBUG')
+DEBUG = False
+#DEBUG = os.environ.get('DEBUG')
 
 
-ALLOWED_HOSTS =env.list('ALLOWED_HOST_DEV')
+
+ALLOWED_HOSTS ='padillacode.pythonanywhere.com', 'wwww.padillacode.pythonanywhere.com'
 
 
 # Application definition
@@ -62,7 +62,7 @@ CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
         'autoParagraph':False
-    } 
+    }
 
 }
 CKEDITOR_UPLOAD_PATH = "/media/"
@@ -163,34 +163,19 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ]
 }
-CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST_DEV')
-# CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS_DEV')
-CSRF_TRUSTED_ORIGINS = ['localhost:8000']
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+CSRF_TRUSTED_ORIGINS = ['padillacode.pythonanywhere.com', 'https://padillacode.pythonanywhere.com']
+CORS_ALLOWED_ORIGINS = ['http://padillacode.pythonanywhere.com', 'https://padillacode.pythonanywhere.com' , ]
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 
 
-if not DEBUG:
-    ALLOWED_HOSTS=config.list('ALLOWED_HOST_DEPLOY')
-    # CORS_ORIGIN_WHITELIST = config.list('CORS_ORIGIN_WHITELIST_DEPLOY')
-    CSRF_TRUSTED_ORIGINS = config.list('CSRF_TRUSTED_ORIGINS_DEPLOY')
-    CORS_ALLOWED_ORIGINS = config.list('CORS_ALLOWED_ORIGINS_DEPLOY')
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-    EMAIL_HOST= 'smtp.gmail.com'
-    EMAIL_PORT=587
-    EMAIL_HOST_USER='padillaseba06@gmail.com'
-    EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD')
-    DEFAULT_FROM_EMAIL = 'padillaseba06@gmail.com'
-    EMAIL_USE_TLS= True
-    
-    # # CORS_ALLOW_ALL_ORIGINS = True
-    # DATABASES = {
-    # "default" : env.db("DATABASE_URL"),
-    # }
-    # DATABASES["default"]["ATOMIC_REQUESTS"] = True
-    
+EMAIL_HOST= 'smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER='padillaseba06@gmail.com'
+EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD')
+# EMAIL_HOST_PASSWORD='bonrvsmlewduuoua'
+EMAIL_USE_TLS= True
     
 
     
