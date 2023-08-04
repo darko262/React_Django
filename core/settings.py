@@ -20,7 +20,7 @@ DEBUG = False
 
 
 
-ALLOWED_HOSTS =config('ALLOWED_HOST_DEPLOY')
+ALLOWED_HOSTS ='padillacode.pythonanywhere.com', 'wwww.padillacode.pythonanywhere.com'
 
 
 # Application definition
@@ -163,8 +163,8 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ]
 }
-CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS_DEPLOY')
-CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS_DEPLOY')
+CSRF_TRUSTED_ORIGINS = ['padillacode.pythonanywhere.com', 'https://padillacode.pythonanywhere.com']
+CORS_ALLOWED_ORIGINS = ['http://padillacode.pythonanywhere.com', 'https://padillacode.pythonanywhere.com' , ]
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
@@ -174,7 +174,7 @@ EMAIL_HOST= config('EMAIL_HOST')
 EMAIL_PORT=config('EMAIL_PORT')
 EMAIL_HOST_USER=config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD')
-# EMAIL_HOST_PASSWORD='bonrvsmlewduuoua'
+
 EMAIL_USE_TLS= config('EMAIL_USE_TLS')
     
 
