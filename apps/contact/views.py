@@ -66,7 +66,7 @@ class ContactCreateView(APIView):
             #     subject=subject,
             #     message=message,
             # )
-            return Response({'status': 'success', 'message': 'Message sent successfully','data':body , 'metodo':metodo })
+            return Response({'status': 'success', 'message': 'Message sent successfully','data':body , 'metodo':send_email })
         except:
             return Response({'status': 'error', 'message': 'Message not sent','data':data, 'metodo':metodo })
 

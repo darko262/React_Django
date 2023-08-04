@@ -165,7 +165,7 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST_DEV')
 # CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS_DEV')
 CSRF_TRUSTED_ORIGINS = ['localhost:8000']
-
+EMAIL_BACKEND= "django.core.mail.backends.console.EmailBackend"
 
 
 
@@ -179,7 +179,7 @@ if not DEBUG:
     EMAIL_HOST= 'smtp.gmail.com'
     EMAIL_PORT=587
     EMAIL_HOST_USER='padillaseba06@gmail.com'
-    EMAIL_HOST_PASSWORD=env('EMAIL_HOST_PASSWORD')
+    EMAIL_HOST_PASSWORD=env.list('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL = 'padillaseba06@gmail.com'
     EMAIL_USE_TLS= True
     
