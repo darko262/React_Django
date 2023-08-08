@@ -1,10 +1,8 @@
-//switch comparando el nombre del icono para retornar el icono correspondiente de leguaje de programacion
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { FaPython, FaCss3, FaReact, FaWrench, FaNodeJs, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
 // import { SiCsharp, SiJavascript, SiAzureartifacts } from "react-icons/si"
 import { GiCircuitry, GiArtificialHive } from "react-icons/gi"
 import { Link } from "react-router-dom"
-// import { faPython, faJava, faJs, faHtml5, faFileCode } from '@fortawesome/free-brands-svg-icons';
 export function IconosProgramacion({ name }) {
     switch (name) {
         case "Python":
@@ -67,21 +65,3 @@ export function BtnSectionAbajoGray() {
     );
 }
 
-// export function BtnSectionAbajoGray() {
-//     return (
-//         <div className='flex relative'>
-//             <button className="w-18 h-14  flex items-center justify-center mr-2  ">
-//                 <Link to="https://github.com/darko262">
-//                 <FaGithub className="h-full md:w-full w-1/2  fill-sky-800 mr-2" />
-//                 </Link>
-
-//             </button>
-//             <button className="w-18 h-14  flex items-center justify-center mr-2 ">
-//                 <FaLinkedin className="h-full md:w-full w-1/2  fill-sky-800 mr-2" />
-//             </button>
-//             <button className="w-18 h-14  flex items-center justify-center mr-2">
-//                 <FaInstagram className="h-full md:w-full w-1/2  fill-sky-800 mr-2" />
-//             </button>
-//         </div>
-//     );
-// }

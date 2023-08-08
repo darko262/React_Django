@@ -8,11 +8,6 @@ import CircleLoader from "react-spinners/CircleLoader";
 
 export function Contactoss() {
 
-
-    // useEffect(() => {
-    //     window.scrollTo(0, 0)
-
-    // }, [])
     useEffect(() => {
         // Función para obtener el valor de una cookie por su nombre
         window.scrollTo(0, 0)

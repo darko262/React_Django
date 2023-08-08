@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom"
-import{ AiOutlineLeft, AiOutlineRight} from "react-icons/ai"
-import{ BsSlash , BsCode , BsCodeSlash} from "react-icons/bs"
 
 
-export function BtnNav({ text, ruta ,ides}) {
+export function BtnNav({ text, ruta }) {
   // Verificar si la ruta está definida
-  const baseUrl = window.location.origin;
+
  
     return (
       <Link to={`/${ruta}`} className="transition-all ease-in-out duration-150 uppercase hover:border-b-4 hover:border-blue-500 text-white text-sm md:text-xl py-3  mx-4 rounded flex items-center">
@@ -17,9 +15,9 @@ export function BtnNav({ text, ruta ,ides}) {
  
 }
 
-export function BtnNavDos({ text, ruta ,ides}) {
+export function BtnNavDos({ text, ruta }) {
   // Verificar si la ruta está definida
-  const baseUrl = window.location.origin;
+  
  
     return (
       <Link to={`/${ruta}`} className=" uppercase    animate-[pulse_1s_ease-in-out_infinite] text-[#043d5a] bg-gradient-to-r from-pink-500 to-violet-500  text-sm md:text-xl py-3 px-2 mx-2 rounded flex items-center">

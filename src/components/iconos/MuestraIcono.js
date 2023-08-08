@@ -1,6 +1,6 @@
 //mostrar iconos de programacion en una pequeña ventana
 
-import { FaPython,FaHtml5,FaCss3 ,FaReact,FaNodeJs,FaRaspberryPi,FaMicrochip, FaBootstrap} from "react-icons/fa"
+import { FaPython,FaHtml5,FaCss3 ,FaReact,FaNodeJs, FaBootstrap} from "react-icons/fa"
 import { SiCsharp,SiJavascript,SiDjango,SiNvidia,SiTailwindcss} from "react-icons/si"
 
 export function MuestraIcono() {
@@ -15,10 +15,10 @@ export function MuestraIcono() {
             <SiDjango className=" md:text-8xl text-5xl text-white opacity-30 mx-1 " />
             <FaNodeJs className=" md:text-8xl text-5xl text-white opacity-30 mx-1 " />
             <SiNvidia className=" md:text-8xl text-5xl text-white opacity-30 mx-1 " />
-            {/* <FaRaspberryPi className=" md:text-8xl text-5xl text-white opacity-30 mx-1 " /> */}
+        
             <SiTailwindcss className=" md:text-8xl text-5xl text-white opacity-30 mx-1 " />
             <FaBootstrap className=" md:text-8xl text-5xl text-white opacity-30 mx-1 " />
-            {/* <FaMicrochip className=" md:text-8xl text-5xl text-white opacity-30 mx-1 " /> */}
+            
             
             
         </div>

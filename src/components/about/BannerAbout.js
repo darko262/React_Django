@@ -1,8 +1,6 @@
 
 import imagent3 from "../../assets/img/sebas.webp";
-// import { BtnSection, BtnSectionAbajo } from "../home/BtnSection";
-import Fondo from "components/iconos/Fondo";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export function BannerAbout() {
     useEffect(() => {
@@ -62,21 +60,6 @@ export function BannerAbout() {
                 </div>
 
 
-                {/* <p>
-                ¡Hola! 👋
-
-                Soy un ingeniero civil electrónico titulado de la Universidad de la Frontera en Temuco, Chile. Me apasiona la tecnología y tengo experiencia en diversos campos como inteligencia artificial, detección de patrones y programación.
-
-                Durante mi carrera académica y profesional, me he enfocado en aplicar mis conocimientos para desarrollar soluciones innovadoras y eficientes. Mi experiencia en inteligencia artificial me ha permitido abordar problemas complejos y encontrar soluciones creativas mediante algoritmos de aprendizaje automático y análisis de datos.
-
-                También tengo experiencia en programación web, donde he trabajado en el desarrollo de sitios y aplicaciones interactivas que brindan una experiencia única a los usuarios. Me encanta explorar nuevas tecnologías y tendencias en el ámbito del desarrollo web para mantenerme actualizado y ofrecer soluciones modernas y atractivas.
-
-                Como ingeniero, me considero una persona proactiva, orientada a los detalles y apasionada por el aprendizaje continuo. Siempre busco nuevos desafíos y oportunidades para mejorar mis habilidades y conocimientos.
-
-    
-
-                ¡Gracias por visitar mi sitio!
-                </p> */}
             </div>
 
 

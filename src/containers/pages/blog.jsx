@@ -1,9 +1,10 @@
 import Footer from "../../components/navigation/Footer"
 import Navbar from "../../components/navigation/Navbar"
 import Layouts from "../../hocs/layouts/Layouts"
-
+import { Helmet } from 'react-helmet-async';
 import { BannerBlog } from "components/blog/BannerBlog"
 import { useParams } from "react-router-dom";
+import imagent4 from "assets/img/cognibot2.webp"
 
 function Blog() {
     const { slug } = useParams();
@@ -12,20 +13,35 @@ function Blog() {
     return (
         
         <Layouts>
+            <Helmet>
+                <title>CogniBot | Blog</title>
+                <meta name="description" content="Agencia de software y marketing digital. Servicios de creacion de pagina web y desarrollo de aplicaciones." />
+                <meta name="keywords" content='agencia de software, agencia de marketing, creacion de pagina web' />
+                <meta name="robots" content='all' />
+                <link rel="canonical" href="https://padillacode.pythonanywhere.com/" />
+                <meta name="author" content='Cognibot' />
+                <meta name="publisher" content='Cognibot' />
+
+                {/* Social Media Tags */}
+                <meta property="og:title" content='Cognibot | Software Agency' />
+                <meta property="og:description" content='Agencia de software y marketing digital. Servicios de creacion de pagina web y desarrollo de aplicaciones.' />
+                <meta property="og:url" href="https://padillacode.pythonanywhere.com/" />
+                <meta property="og:image" content={imagent4} />
+
+                <meta name="twitter:title" content='Cognibot | Software Agency' />
+                <meta
+                    name="twitter:description"
+                    content='Agencia de software y marketing digital. Servicios de creacion de pagina web y desarrollo de aplicaciones.'
+                />
+                <meta name="twitter:image" content={imagent4} />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
             <Navbar />
-            
             <div className=" pt-20">
-            
             <BannerBlog slug={slug}/>
-            {/* <Experiencia/> */}
-            {/* <section className="section">
-                    
-                </section> */}
-            {/* <div className="pt-28 lg:pt-0"> */}
-            
             <Footer />
             </div>
-            {/* </div> */}
+            
         </Layouts>
     )
 }

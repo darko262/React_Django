@@ -1,15 +1,8 @@
 
-// import imagent4 from "../../assets/img/padillacode.png";
-// import imagent4 from "../../assets/img/padillacode2.gif";
 import imagent4 from "../../assets/img/cerebrMejor.webp";
-import imagent5 from "../../assets/img/progfondo.jpg";
-import imagent6 from "../../assets/img/bg-circu.jpg";
 import { BtnSectionAbajoGray } from "components/iconos/IconosProgramacion";
-import Typed from 'react-typed';
 import { useEffect } from "react";
 
-import { motion } from 'framer-motion'
-import Fondo from "components/iconos/Fondo";
 
 
 export function BannerTres() {
@@ -45,7 +38,7 @@ export function BannerTres() {
                     </div>
                 </div>
             </div>
-            <Fondo posicion={"top-1/2 "} />
+            
         </section>
 
 

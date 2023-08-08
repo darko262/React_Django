@@ -1,20 +1,20 @@
-import { BtnSectionAbajo } from "components/home/BtnSection";
+
 import { BtnSectionAbajoGray } from "components/iconos/IconosProgramacion"
 
 import { connect } from "react-redux";
 import { BtnNav } from "./BtnNav";
-import Fondo from "components/iconos/Fondo";
+
 import imagent4 from "assets/img/declinado.svg"
-import imagent5 from "assets/img/cognibot2.png"
+import imagent5 from "assets/img/cognibot2.webp"
 
 function Footer() {
     return (
         <section className=" h-72  w-full grid place-items-center relative bg-no-repeat bg-cover bg-left" style={{ backgroundImage: `url(${imagent4})` }}>
-            {/* <Fondo posicion={" bottom-0 left-1/2  "} /> */}
+
             <div className="  grid grid-cols-3 ">
                 <div className="  grid ">
                     <div className="w-full  grid h-auto place-items-center ">
-                        <a href="#" className=" md:h-1/2 md:w-1/2 flex object-contain"> <img src={imagent5} className=" h-auto w-auto mx-auto"></img></a>
+                        <a href="/" className=" h-20  w-32"> <img src={imagent5} alt="logo"></img></a>
                     </div>
 
                 </div>

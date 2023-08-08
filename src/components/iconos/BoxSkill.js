@@ -2,7 +2,7 @@
 export function BoxSkill({ logo,progreso }) {
     return (
         <div className="md:h-60 md:w-60 h-40 w-40 relative group ">
-            <img src={logo} className=" h-full w-auto grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100"></img>
+            <img src={logo} className=" h-full w-auto grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100" alt="imgSkill"></img>
             <div className="absolute h-14 w-20 md:h-28 md:w-28 bottom-0 right-0  " >
                 <div className="relative">
                 <svg height={100} width={100}>

@@ -46,12 +46,3 @@ export function BtnSectionAbajo() {
 }
 
 
-// export function BtnSection2({ text }) {
-//   return (
-//       <button className="h-auto w-auto text-lg px-8 mr-2 py-4 border-none outline-none rounded-md uppercase bg-indigo-900 text-white font-bold transition duration-500 shadow-md hover:bg-gradient-to-r from-indigo-900 via-indigo-700 to-indigo-900 active:scale-95">
-//           {text}
-//       </button>
-
-//   )
-
-// }

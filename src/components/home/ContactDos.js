@@ -1,19 +1,6 @@
 
-import { useEffect, useState } from "react"
 import { BtnNavDos } from "../navigation/BtnNav";
-
-import { Link } from "react-router-dom";
-import axios from "axios";
-
-
-
 export function Contact() {
-
-
-
-
-
-    
     return (
 
         <section id="#contacto">

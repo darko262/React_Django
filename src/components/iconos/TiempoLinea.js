@@ -5,9 +5,9 @@ import { SiCsharp, SiNvidia } from 'react-icons/si'
 
 
 
-export function LineaDeTiempo({ imagen }) {
+export function LineaDeTiempo() {
     return (
-        <VerticalTimeline lineColor="white">
+        <VerticalTimeline >
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: 'rgb(86,17,57)', color: '#fff' }}
@@ -23,7 +23,7 @@ export function LineaDeTiempo({ imagen }) {
                 <h3 className="vertical-timeline-element-title ">Ingeniero</h3>
                 <h4 className="vertical-timeline-element-subtitle ">Temuco, CL</h4>
                 <p className="">
-                Exploración de programación web con énfasis en automatización utilizando Python y el framework Django. Integración de interfaces interactivas con React para proyectos más dinámicos y eficientes.
+                    Exploración de programación web con énfasis en automatización utilizando Python y el framework Django. Integración de interfaces interactivas con React para proyectos más dinámicos y eficientes.
                 </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -75,7 +75,7 @@ export function LineaDeTiempo({ imagen }) {
                 <h4 className="vertical-timeline-element-subtitle">Temuco, CL</h4>
                 <p>
 
-                Proyecto médico centrado en la creación de un sistema de adquisición y gestión de datos de sensores. Junto a un equipo liderado por un anestesista, creamos un modelo predictivo de umbrales de dolor en trabajo de parto, sentando bases para futuras investigaciones y mejoras en la anestesia en este contexto.
+                    Proyecto médico centrado en la creación de un sistema de adquisición y gestión de datos de sensores. Junto a un equipo liderado por un anestesista, creamos un modelo predictivo de umbrales de dolor en trabajo de parto, sentando bases para futuras investigaciones y mejoras en la anestesia en este contexto.
                 </p>
             </VerticalTimelineElement>
         </VerticalTimeline>
@@ -84,20 +84,3 @@ export function LineaDeTiempo({ imagen }) {
 
 
 
-//   export function LineaDeTiempo({ imagen }) {
-//     return (
-//       <div className="relative border-l-blue-500 h-52 w-4/5 border-l-8 ">
-//         <div className="absolute h-14 w-14 top-20 -left-8 rounded-full ">
-//           <img src={imagen} className="w-full h-full" alt=""></img>
-//         </div>
-//         <div className="text-center flex items-center justify-center h-full ml-5">
-//           <p className="text-white">
-//             No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos,
-//             quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas
-//             "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición,
-//             como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
-//           </p>
-//         </div>
-//       </div>
-//     );
-//   }

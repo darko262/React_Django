@@ -9,7 +9,7 @@ export function BoxProyectos({ titulo, logo, parrafo, slug, lenguaje, }) {
         <Link to={`blog/${slug}`}>
             {isMobile ? (
                 <div className=" h-full w-full   bg-slate-700 border-2 border-sky-950 rounded-3xl z-20  backdrop-brightness-125 backdrop-blur-xl ">
-                    <img src={logo} className=" h-1/2 w-full rounded-3xl ease-in   "></img>
+                    <img src={logo} className=" h-1/2 w-full rounded-3xl ease-in   " alt="imgProyecto"></img>
                     <div className=" text-center   h-full w-full  text-blue-500">
                         <h2 className="text-3xl ">{titulo}</h2>
                         <h4 className="w-full h-full ">{parrafo}</h4>
@@ -38,7 +38,7 @@ export function BoxProyectos({ titulo, logo, parrafo, slug, lenguaje, }) {
 
                     <div className=" h-full mr-1 rounded-3xl ">
 
-                        <img src={logo} className=" h-full w-96 rounded-3xl ease-in  duration-500 group-hover:scale-110  "></img>
+                        <img src={logo} className=" h-full w-96 rounded-3xl ease-in  duration-500 group-hover:scale-110  " alt="imgProyecto"></img>
                         <div className=" absolute left-0 bottom-0 w-full h-full bg-gradient-to-b from-transparent to-blue-400 rounded-3xl flex justify-center flex-col text-center translate-y-full easy-linear duration-500 md:group-hover:translate-y-0 ">
                             <h2 className="lg:text-4xl text-2xl  ">{titulo}</h2>
 

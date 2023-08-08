@@ -1,35 +1,13 @@
-
-
-import backen from "../../assets/img/otro.jpg"
 import { BoxProyectos } from "components/iconos/BoxProyectos";
-// import { getAllProyectos, getAllProyectosDos } from "api/Proyecto.api";
 import { useEffect, useState } from "react";
 import { motion } from 'framer-motion'
-import Fondo from "components/iconos/Fondo";
 import axios from 'axios';
-
-
-
 
 export function Recientes() {
 
-    // const [proyect, setProyect] = useState([]);
-    // // const [languages, setLanguages] = useState([]);
 
-    // useEffect(() => {
-    //     async function loadProyectos() {
-    //         const res = await getAllProyectos();
-
-    //         setProyect(res.data.results.posts)
-    //         // setProyect(res.data.results.posts)
-
-    //         console.log(res.data.results.posts);
-    //     }
-    //     loadProyectos();
-    // }, []);
     const [proyect, setProyect] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    
 
     useEffect(() => {
         async function loadProyectos() {
@@ -37,30 +15,18 @@ export function Recientes() {
                 const url = 'https://padillacode.pythonanywhere.com/api/blog/list';
                 const res = await axios.get(url);
                 setProyect(res.data.results.posts);
-                setLoading(false);
+                
                 console.log(res.data.results.posts);
                
             } catch (error) {
-                setError(error.message);
-                setLoading(false);
+                console.log(error.message);
+                
                 
             }
         }
 
         loadProyectos();
     }, []);
-
-    
-
-    // if (loading) {
-    //     return <div>Loading...</div>;
-    // }
-
-    // if (error) {
-    //     return <div>Error: {error}</div>;
-    // }
-
-
 
 
     return (
@@ -82,15 +48,8 @@ export function Recientes() {
                             whileInView={{ opacity: 1, scale: 1 }} >
 
                             <BoxProyectos titulo={post.title} logo={post.thumbnail} parrafo={post.description} slug={post.slug} lenguaje={post.languages.map(language => language.name)} />
-                            {/* <BoxProyectos titulo={post.title} logo={post.thumbnail} parrafo={post.description} slug={post.slug} lenguaje={post.languages.map(language => language.name)} /> */}
-                            {/* <BoxProyectos titulo={post.title} logo={backen} parrafo={post.description} slug={post.slug}  lenguaje={[post.languages.name]}/> */}
 
                         </motion.div>
-
-
-                        // <div key={post.id} >
-                        //     <BoxProyectos titulo={post.title} logo={post.thumbnail} />
-                        // </div>
                     ))}
                 </motion.div>
             </motion.div>

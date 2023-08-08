@@ -1,5 +1,3 @@
-
-// import imagent4 from "../../assets/img/bg-circu.jpg";
 export function BannerPrincipal({title , description, published ,  time_read, imagent4}){
     return(
         <section className="h-1/2 bg-cover bg-no-repeat bg-center drop-shadow-2xl rounded-b-xl"style={{ backgroundImage: `url(${imagent4})` }}>
