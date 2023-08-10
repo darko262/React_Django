@@ -37,7 +37,7 @@ function Blog() {
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <Navbar />
-            <div className=" pt-20">
+            <div className=" pt-24">
             <BannerBlog slug={slug}/>
             <Footer />
             </div>

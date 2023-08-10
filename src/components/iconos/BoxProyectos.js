@@ -8,11 +8,11 @@ export function BoxProyectos({ titulo, logo, parrafo, slug, lenguaje, }) {
     return (
         <Link to={`blog/${slug}`}>
             {isMobile ? (
-                <div className=" h-full w-full   bg-slate-700 border-2 border-sky-950 rounded-3xl z-20  backdrop-brightness-125 backdrop-blur-xl ">
+                <div className=" h-full w-full md:w-10/12 md:mx-auto  bg-slate-700 border-2 border-sky-950 rounded-3xl z-20  backdrop-brightness-125 backdrop-blur-xl">
                     <img src={logo} className=" h-1/2 w-full rounded-3xl ease-in   " alt="imgProyecto"></img>
                     <div className=" text-center   h-full w-full  text-blue-500">
-                        <h2 className="text-3xl ">{titulo}</h2>
-                        <h4 className="w-full h-full ">{parrafo}</h4>
+                        <h2 className="text-3xl w-11/12  mx-auto ">{titulo}</h2>
+                        <h4 className=" w-11/12  mx-auto h-full ">{parrafo}</h4>
 
                         <div className="h-1/2 w-full  grid grid-cols-2 gap-4">
                             <div className="flex justify-center items-center">
@@ -38,11 +38,11 @@ export function BoxProyectos({ titulo, logo, parrafo, slug, lenguaje, }) {
 
                     <div className=" h-full mr-1 rounded-3xl ">
 
-                        <img src={logo} className=" h-full w-96 rounded-3xl ease-in  duration-500 group-hover:scale-110  " alt="imgProyecto"></img>
+                        <img src={logo} className=" h-full w-96 rounded-3xl ease-in  duration-500 group-hover:scale-105   " alt="imgProyecto"></img>
                         <div className=" absolute left-0 bottom-0 w-full h-full bg-gradient-to-b from-transparent to-blue-400 rounded-3xl flex justify-center flex-col text-center translate-y-full easy-linear duration-500 md:group-hover:translate-y-0 ">
-                            <h2 className="lg:text-4xl text-2xl  ">{titulo}</h2>
+                            <h2 className="lg:text-4xl text-2xl w-11/12  mx-auto ">{titulo}</h2>
 
-                            <h4 className="text-white">{parrafo} </h4>
+                            <h4 className="text-white w-11/12  mx-auto h-full">{parrafo} </h4>
 
                             <div className="grid grid-cols-11 place-content-center  absolute bottom-0 pb-6 ">
                                 {lenguaje.map((lenguaje, index) => (

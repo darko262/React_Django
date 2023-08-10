@@ -33,26 +33,28 @@ export function Recientes() {
         <section className=" w-5/6 min-h-screen  mx-auto   ">
             {/* <Fondo posicion={"top-1/2  "} /> */}
             {/* <Fondo posicion={" right-0"} /> */}
-            <motion.div className="container "
+            <div className="container "
             >
                 <h2 className="text-center text-3xl md:text-6xl text-white mb-7 font-mono">
                     Proyectos <span className="text-blue-500">Recientes</span>
 
                 </h2>
-                <motion.div className="  xl:flex xl:flex-row xl:w-full xl:flex-wrap xl:h-full xl:justify-center z-10 "
+                <div className="  lg:flex lg:flex-row lg:w-full lg:flex-wrap lg:h-full lg:justify-center "
                 >
                     {proyect.map(post => (
                         <motion.div key={post.id}
                             initial={{ opacity: 0, scale: 0.5 }}
                             transition={{ duration: 0.5 }}
-                            whileInView={{ opacity: 1, scale: 1 }} >
+                            whileInView={{ opacity: 1, scale: 1 }} 
+                            className=" pb-2">
+                            
 
-                            <BoxProyectos titulo={post.title} logo={post.thumbnail} parrafo={post.description} slug={post.slug} lenguaje={post.languages.map(language => language.name)} />
+                            <BoxProyectos titulo={post.title} logo={post.thumbnail} parrafo={post.description} slug={post.slug} lenguaje={post.languages.map(language => language.name)}  />
 
                         </motion.div>
                     ))}
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
         </section>
     );
 }

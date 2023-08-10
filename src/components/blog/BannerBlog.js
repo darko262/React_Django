@@ -9,7 +9,7 @@ export function BannerBlog(slug) {
     const [proyect, setProyect] = useState([]);
     const [category, setCategory] = useState([]);
     const [languages, setLanguages] = useState([]);
-    
+
 
 
     useEffect(() => {
@@ -25,12 +25,12 @@ export function BannerBlog(slug) {
 
                 setCategory(res.data.post.category);
                 setLanguages(res.data.post.languages);
-                
+
                 console.log(res.data.post.languages)
 
             } catch (error) {
                 console.log(error.message);
-                
+
 
             }
 
@@ -40,8 +40,6 @@ export function BannerBlog(slug) {
     }, [slug.slug]);
     return (
         <div >
-
-
             <BannerPrincipal title={proyect.title} description={proyect.description} published={proyect.published} time_read={proyect.time_read} imagent4={proyect.thumbnail} />
             <div className="relative isolate overflow-hidden bg-white px-6 py-0 lg:overflow-visible lg:px-0 pt-4 ">
 
