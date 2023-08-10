@@ -6,7 +6,7 @@ def lenguaje_thumbnail_directory(instance, filename):
 class Language(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True)
-    imagen =     models.ImageField(upload_to=lenguaje_thumbnail_directory, max_length=500)
+    imagen =  models.ImageField(upload_to=lenguaje_thumbnail_directory, max_length=500, blank=True)
   
 
     def __str__(self):
