@@ -12,7 +12,7 @@ export function Recientes() {
     useEffect(() => {
         async function loadProyectos() {
             try {
-                const url = 'https://padillacode.pythonanywhere.com/api/blog/list';
+                const url = 'https://www.cognibot.dev/api/blog/list';
                 const res = await axios.get(url);
                 setProyect(res.data.results.posts);
                 

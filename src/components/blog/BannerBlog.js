@@ -17,7 +17,7 @@ export function BannerBlog(slug) {
         async function loadProyectos() {
             try {
                 const parametro = slug.slug
-                const url = `https://padillacode.pythonanywhere.com/api/blog/detail/${parametro}`;
+                const url = `https://www.cognibot.dev/api/blog/detail/${parametro}`;
                 const res = await axios.get(url);
 
 
