@@ -20,7 +20,7 @@ DEBUG = False
 
 
 
-ALLOWED_HOSTS ='padillacode.pythonanywhere.com', 'wwww.padillacode.pythonanywhere.com'
+ALLOWED_HOSTS ='padillacode.pythonanywhere.com', 'wwww.padillacode.pythonanywhere.com','www.cognibot.dev','cognibot.dev'
 
 
 # Application definition
@@ -163,8 +163,8 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ]
 }
-CSRF_TRUSTED_ORIGINS = ['padillacode.pythonanywhere.com', 'https://padillacode.pythonanywhere.com','http://localhost:3000']
-CORS_ALLOWED_ORIGINS = ['http://padillacode.pythonanywhere.com', 'https://padillacode.pythonanywhere.com' ,'http://localhost:3000' ]
+CSRF_TRUSTED_ORIGINS = ['padillacode.pythonanywhere.com', 'https://padillacode.pythonanywhere.com','http://localhost:3000','www.cognibot.dev','https://cognibot.dev']
+CORS_ALLOWED_ORIGINS = ['http://padillacode.pythonanywhere.com', 'https://padillacode.pythonanywhere.com' ,'http://localhost:3000','www.cognibot.dev','https://cognibot.dev' ]
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
@@ -177,7 +177,7 @@ EMAIL_USE_TLS= True
 EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD')
 
 
-    
 
-    
+
+
 
