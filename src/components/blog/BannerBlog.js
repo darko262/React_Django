@@ -5,6 +5,7 @@ import DOMPurify from 'dompurify'
 import { IconosProgramacion } from "components/iconos/IconosProgramacion";
 import axios from 'axios';
 
+
 export function BannerBlog(slug) {
     const [proyect, setProyect] = useState([]);
     const [category, setCategory] = useState([]);
@@ -72,13 +73,13 @@ export function BannerBlog(slug) {
                     </div>
                     <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                         {proyect.media_file ? (
-                            <video className="w-[20rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem]">
+                            <video  autoPlay className="w-[20rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem]">
                                 <source src={proyect.media_file} type="video/mp4" />
                                 Tu navegador no soporta el elemento de video.
                             </video>
                         ) : (
                             <img className="w-[20rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem]" src={proyect.thumbnail} alt="imagen" />
-                            
+
                         )}
                     </div>
 
