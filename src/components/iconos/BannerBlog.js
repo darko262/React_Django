@@ -4,7 +4,7 @@ export function BannerPrincipal({title , description, published ,  time_read, im
             <div className=" h-96">
                 <div className=" flex justify-center items-center flex-col h-full text-white backdrop-blur-sm font-mono w-10/12  mx-auto">
                     <h2 className=" text-4xl">{title}</h2>
-                    <h4>{description}</h4>
+                    {/* <h4>{description}</h4> */}
                     <h6 className="text-2xl">  Tiempo de lectura : {time_read} minutos</h6>
                 </div>
 

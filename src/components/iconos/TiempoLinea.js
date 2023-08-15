@@ -8,6 +8,7 @@ import { SiCsharp, SiNvidia } from 'react-icons/si'
 export function LineaDeTiempo() {
     return (
         <VerticalTimeline >
+
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: 'rgb(86,17,57)', color: '#fff' }}

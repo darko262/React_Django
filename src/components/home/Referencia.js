@@ -76,7 +76,7 @@ export function Referencia() {
                     <div>
                         <div>
                             <div className=" grid grid-cols-1 gap-4" alt="Slide 2">
-                                <div className="  w-full h-full   ">
+                                {/* <div className="  w-full h-full   ">
                                 <FaQuoteLeft className="text-blue-500 lg:text-6xl text-4xl "/>
                                     <p className="text-white relative"> "El equipo superó nuestras expectativas con la página web. Su creatividad y profesionalismo se reflejan en cada detalle, desde el diseño hasta la funcionalidad. Estamos emocionados de presentar nuestra marca en esta plataforma de alta calidad. ¡Gran trabajo!.<FaQuoteRight className="text-blue-500 lg:text-5xl md:text-3xl text-2x1 absolute right-0"/></p>
 
@@ -89,7 +89,7 @@ export function Referencia() {
                                     </div>
 
 
-                                </div>
+                                </div> */}
 
 
                             </div>

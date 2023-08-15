@@ -23,7 +23,7 @@ class Post(models.Model):
     title =         models.CharField(max_length=255)
     slug =          models.SlugField(max_length=255, unique=True)
     thumbnail =     models.ImageField(upload_to=blog_thumbnail_directory, max_length=500)
-    
+    media_file = models.FileField(upload_to=blog_thumbnail_directory, blank=True)  
     description =   models.TextField(max_length=255)
     content =       RichTextField()
 
