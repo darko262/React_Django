@@ -15,23 +15,23 @@ function Blog() {
         <Layouts>
             <Helmet>
                 <title>CogniBot | Blog</title>
-                <meta name="description" content="Agencia de software y marketing digital. Servicios de creacion de pagina web y desarrollo de aplicaciones." />
+                <meta name="description" content="Agencia de software y marketing digital Chile. Servicios de creacion de pagina web y desarrollo de aplicaciones." />
                 <meta name="keywords" content='agencia de software, agencia de marketing, creacion de pagina web' />
                 <meta name="robots" content='all' />
-                <link rel="canonical" href="https://padillacode.pythonanywhere.com/" />
+                <link rel="canonical" href="https://www.cognibot.dev" />
                 <meta name="author" content='Cognibot' />
                 <meta name="publisher" content='Cognibot' />
 
                 {/* Social Media Tags */}
                 <meta property="og:title" content='Cognibot | Software Agency' />
-                <meta property="og:description" content='Agencia de software y marketing digital. Servicios de creacion de pagina web y desarrollo de aplicaciones.' />
-                <meta property="og:url" href="https://padillacode.pythonanywhere.com/" />
+                <meta property="og:description" content='Agencia de software y marketing digital Chile. Servicios de creacion de pagina web y desarrollo de aplicaciones.' />
+                <meta property="og:url" href="https://www.cognibot.dev" />
                 <meta property="og:image" content={imagent4} />
 
                 <meta name="twitter:title" content='Cognibot | Software Agency' />
                 <meta
                     name="twitter:description"
-                    content='Agencia de software y marketing digital. Servicios de creacion de pagina web y desarrollo de aplicaciones.'
+                    content='Agencia de software y marketing digital Chile. Servicios de creacion de pagina web y desarrollo de aplicaciones.'
                 />
                 <meta name="twitter:image" content={imagent4} />
                 <meta name="twitter:card" content="summary_large_image" />

@@ -30,7 +30,7 @@ export default function Navbar() {
                         <div className="fixed left-0 top-0 w-[80%] lg:w-[60%] h-full border-r rounded-br-[50%] transition-all duration-500 ease-in-out z-10 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${imagent4})` }}>
                             <div className="uppercase p-4 grid grid-cols-1  text-center content-center h-full justify-items-center">
                                 <Link to={`/`} className=" h-20  w-32"> <img src={imagent5} alt="logo"></img></Link>
-                                <BtnNav text="Home" ruta="" />
+                                <BtnNav text="Principal" ruta="" />
                                 <BtnNav text="Nosotros" ruta="about" />
                                 {/* <BtnNav text="Servicios" ruta="service" /> */}
                                 <BtnNav text="contacto" ruta="contact" />
@@ -45,7 +45,7 @@ export default function Navbar() {
 
                     <Link to={`/`} className=" h-20  w-32"> <img src={imagent5} alt="logo"></img></Link>
                     <div className="flex items-center ">
-                        <BtnNav text="Home" ruta="" />
+                        <BtnNav text="Principal" ruta="" />
                         <BtnNav text="Nosotros" ruta="about" />
                         {/* <BtnNav text="Servicios" ides="service" /> */}
                         <BtnNav text="contacto" ruta="contact" />

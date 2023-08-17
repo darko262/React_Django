@@ -39,12 +39,12 @@ export function BoxProyectos({ titulo, logo, parrafo, slug, lenguaje, }) {
                     <div className=" h-full mr-1 rounded-3xl ">
 
                         <img src={logo} className=" h-full w-96 rounded-3xl ease-in  duration-500 group-hover:scale-105   " alt="imgProyecto"></img>
-                        <div className=" absolute left-0 bottom-0 w-full h-full bg-gradient-to-b from-transparent to-blue-400 rounded-3xl flex justify-center flex-col text-center translate-y-full easy-linear duration-500 md:group-hover:translate-y-0 ">
-                            <h2 className="lg:text-4xl text-2xl w-11/12  mx-auto ">{titulo}</h2>
+                        <div className="  absolute left-0 bottom-0 w-full h-full bg-gradient-to-b from-transparent to-blue-500 rounded-3xl flex justify-center  items-end flex-col text-center translate-y-full easy-linear duration-500 md:group-hover:translate-y-0 ">
+                            <h2 className="lg:text-4xl text-2xl w-11/12  mx-auto  ">{titulo}</h2>
 
-                            <h4 className="text-white w-11/12  mx-auto h-full">{parrafo} </h4>
+                            <h4 className="text-white w-11/12  mx-auto h-full my-auto  text-center justify-center flex items-center">{parrafo} </h4>
 
-                            <div className="grid grid-cols-11 place-content-center  absolute bottom-0 pb-6 ">
+                            <div className="grid grid-cols-5 place-content-center  absolute bottom-0  left-2  ">
                                 {lenguaje.map((lenguaje, index) => (
                                     <IconosProgramacion key={index} name={lenguaje} />
                                 ))}
