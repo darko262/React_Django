@@ -26,7 +26,7 @@ export function BannerBlog(slug) {
 
                 setCategory(res.data.post.category);
                 setLanguages(res.data.post.languages);
-                
+
                 // console.log(res.data.post.languages)
 
             } catch (error) {
@@ -73,15 +73,19 @@ export function BannerBlog(slug) {
                     </div>
                     <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                         {proyect.media_file ? (
-                            <video  autoPlay className="w-[20rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem]">
-                                <source src={proyect.media_file} type="video/mp4" />
-                                Tu navegador no soporta el elemento de video.
-                            </video>
+                            proyect.media_file.endsWith('.mp4') ? (
+                                <video autoPlay className="w-[20rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem]">
+                                    <source src={proyect.media_file} type="video/mp4" />
+                                    Tu navegador no soporta el elemento de video.
+                                </video>
+                            ) : proyect.media_file.endsWith('.gif') ? (
+                                <img className="w-[20rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem]" src={proyect.media_file} alt="contenido" />
+                            ) : <img className="w-[20rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem]" src={proyect.media_file} alt="contenido" />
                         ) : (
-                            <img className="w-[20rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem]" src={proyect.thumbnail} alt="imagen" />
-
+                            <img className="w-[20rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[30rem]" src={proyect.thumbnail} alt="contenido" />
                         )}
                     </div>
+
 
                     <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                         <div className="lg:pr-4">

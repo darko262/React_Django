@@ -42,7 +42,7 @@ export function BoxProyectos({ titulo, logo, parrafo, slug, lenguaje, }) {
                         <div className="  absolute left-0 bottom-0 w-full h-full bg-gradient-to-b from-transparent to-blue-500 rounded-3xl flex justify-center  items-end flex-col text-center translate-y-full easy-linear duration-500 md:group-hover:translate-y-0 ">
                             <h2 className="lg:text-4xl text-2xl w-11/12  mx-auto  ">{titulo}</h2>
 
-                            <h4 className="text-white w-11/12  mx-auto h-full my-auto  text-center justify-center flex items-center">{parrafo} </h4>
+                            <h4 className="text-white w-11/12  mx-auto h-full my-auto  text-center justify-center flex items-center font-bold">{parrafo} </h4>
 
                             <div className="grid grid-cols-5 place-content-center  absolute bottom-0  left-2  ">
                                 {lenguaje.map((lenguaje, index) => (
