@@ -16,7 +16,7 @@ function Blog() {
             <Helmet>
                 <title>CogniBot | Blog</title>
                 <meta name="description" content="Agencia de software y marketing digital Chile. Servicios de creacion de pagina web y desarrollo de aplicaciones." />
-                <meta name="keywords" content='agencia de software, agencia de marketing, creacion de pagina web' />
+                <meta name="keywords" content='agencia de software, agencia de marketing, creacion de pagina web, chile' />
                 <meta name="robots" content='all' />
                 <link rel="canonical" href="https://www.cognibot.dev" />
                 <meta name="author" content='Cognibot' />

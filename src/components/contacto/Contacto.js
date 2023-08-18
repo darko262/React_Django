@@ -81,16 +81,16 @@ export function Contactoss() {
                         phone: '',
 
                     })
-                    alert('Message has been sent.')
+                    alert('Tu mensaje fue enviado! lo contactaremos pronto!')
                 } else {
                     setLoading(false);
-                    alert('Error sending message.')
+                    alert('Error al enviar el mensaje.')
                 }
             }
             fetchData()
 
         } else {
-            alert('You must accept the terms of service and conditions')
+            alert('Acepta las condiciones del servicio')
         }
     }
 
