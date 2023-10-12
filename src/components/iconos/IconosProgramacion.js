@@ -27,7 +27,7 @@ export function IconosProgramacion({ name }) {
             return <SiMysql className="md:h-8 h-5 fill-blue-500 lg:fill-black mr-2" />
         case "SiAstro":
             return <SiAstro className="md:h-8 h-5 fill-blue-500 lg:fill-black mr-2" />
-        case "SiAstro":
+        case "SiDjango":
             return <SiDjango className="md:h-8 h-5 fill-blue-500 lg:fill-black mr-2" />  
         case "reparacion":
             return <FaWrench className="md:h-8 h-5 fill-blue-500 lg:fill-black mr-2" />       
