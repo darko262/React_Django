@@ -1,6 +1,6 @@
 
 import { FaPython, FaCss3, FaReact, FaWrench, FaNodeJs, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
-import { SiMongodb, SiNvidia, SiMysql, SiCsharp,SiAstro} from "react-icons/si"
+import { SiMongodb, SiNvidia, SiMysql, SiCsharp,SiAstro,SiDjango} from "react-icons/si"
 import { GiCircuitry, GiArtificialHive } from "react-icons/gi"
 import { Link } from "react-router-dom"
 export function IconosProgramacion({ name }) {
@@ -26,7 +26,9 @@ export function IconosProgramacion({ name }) {
         case "SiMysql":
             return <SiMysql className="md:h-8 h-5 fill-blue-500 lg:fill-black mr-2" />
         case "SiAstro":
-            return <SiMysql className="md:h-8 h-5 fill-blue-500 lg:fill-black mr-2" />  
+            return <SiAstro className="md:h-8 h-5 fill-blue-500 lg:fill-black mr-2" />
+        case "SiAstro":
+            return <SiDjango className="md:h-8 h-5 fill-blue-500 lg:fill-black mr-2" />  
         case "reparacion":
             return <FaWrench className="md:h-8 h-5 fill-blue-500 lg:fill-black mr-2" />       
         default:
