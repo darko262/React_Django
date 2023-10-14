@@ -21,12 +21,12 @@ function Sobremi() {
                 <meta name="publisher" content='Cognibot' />
 
                 {/* Social Media Tags */}
-                <meta property="og:title" content='Cognibot | Software Agency' />
+                <meta property="og:title" content='Cognibot | Desarrollo Web, Análisis de Datos, Electrónica e Inteligencia Artificial' />
                 <meta property="og:description" content='Somos una agencia de software y marketing digital en Chile, especializada en desarrollo frontend y backend para sitios web, análisis de datos, proyectos electrónicos y soluciones basadas en inteligencia artificial. Transformamos tus ideas en realidad.' />
                 <meta property="og:url" href="https://www.cognibot.dev" />
                 <meta property="og:image" content={imagent4} />
 
-                <meta name="twitter:title" content='Cognibot | Software Agency' />
+                <meta name="twitter:title" content='Cognibot | Desarrollo Web, Análisis de Datos, Electrónica e Inteligencia Artificial' />
                 <meta
                     name="twitter:description"
                     content='Somos una agencia de software y marketing digital en Chile, especializada en desarrollo frontend y backend para sitios web, análisis de datos, proyectos electrónicos y soluciones basadas en inteligencia artificial. Transformamos tus ideas en realidad.'
