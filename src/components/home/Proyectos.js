@@ -16,7 +16,7 @@ export function Recientes() {
                 const res = await axios.get(url);
                 setProyect(res.data.results.posts);
                 
-                console.log(res.data.results.posts);
+                // console.log(res.data.results.posts);
                
             } catch (error) {
                 console.log(error.message);
