@@ -13,7 +13,7 @@ function Sobremi() {
         <Layouts>
             <Helmet>
                 <title>CogniBot | About us</title>
-                <meta name="description" content="Agencia de software y marketing digital Chile. Servicios de creacion de pagina web y desarrollo de aplicaciones." />
+                <meta name="description" content="Somos una agencia de software y marketing digital en Chile, especializada en desarrollo frontend y backend para sitios web, análisis de datos, proyectos electrónicos y soluciones basadas en inteligencia artificial. Transformamos tus ideas en realidad." />
                 <meta name="keywords" content='agencia de software, agencia de marketing, creacion de pagina web, chile' />
                 <meta name="robots" content='all' />
                 <link rel="canonical" href="https://www.cognibot.dev" />
@@ -22,14 +22,14 @@ function Sobremi() {
 
                 {/* Social Media Tags */}
                 <meta property="og:title" content='Cognibot | Software Agency' />
-                <meta property="og:description" content='Agencia de software y marketing digital Chile. Servicios de creacion de pagina web y desarrollo de aplicaciones.' />
+                <meta property="og:description" content='Somos una agencia de software y marketing digital en Chile, especializada en desarrollo frontend y backend para sitios web, análisis de datos, proyectos electrónicos y soluciones basadas en inteligencia artificial. Transformamos tus ideas en realidad.' />
                 <meta property="og:url" href="https://www.cognibot.dev" />
                 <meta property="og:image" content={imagent4} />
 
                 <meta name="twitter:title" content='Cognibot | Software Agency' />
                 <meta
                     name="twitter:description"
-                    content='Agencia de software y marketing digital Chile. Servicios de creacion de pagina web y desarrollo de aplicaciones.'
+                    content='Somos una agencia de software y marketing digital en Chile, especializada en desarrollo frontend y backend para sitios web, análisis de datos, proyectos electrónicos y soluciones basadas en inteligencia artificial. Transformamos tus ideas en realidad.'
                 />
                 <meta name="twitter:image" content={imagent4} />
                 <meta name="twitter:card" content="summary_large_image" />
