@@ -9,6 +9,8 @@ import Blog from "containers/pages/blog";
 import imagent4 from "assets/img/fondo2.svg"
 import imagent5 from "assets/img/cognibot2.webp"
 import Contacto from "containers/pages/contacto";
+import Politica from "containers/pages/politica";
+import Terminos from "containers/pages/terminos";
 function App() {
 
 
@@ -47,6 +49,8 @@ function App() {
               <Route path="/about" element={<Sobremi />}></Route>
               <Route path="/blog/:slug" element={<Blog />}></Route>
               <Route path="/contact" element={<Contacto />}></Route>
+              <Route path="/privacidad" element={<Politica />}></Route>
+              <Route path="/terminos" element={<Terminos />}></Route>
             </Routes>
           </Router>
         </Provider>

@@ -244,7 +244,7 @@ export function Contactoss() {
                                                 />
                                             </Switch>
                                             <p className="col-span-9 ml-4 text-md font-normal leading-6 text-gray-600">
-                                                Al seleccionar esto, aceptas los <span className="text-blue-500"><Link to='/terms'>Términos de servicio</Link></span> y la <span className="text-blue-500"><Link to='/privacy'>Política de privacidad</Link></span>.
+                                                Al seleccionar esto, aceptas los <span className="text-blue-500"><Link to='/terminos'>Términos de servicio</Link></span> y la <span className="text-blue-500"><Link to='/privacidad'>Política de privacidad</Link></span>.
                                             </p>
 
                                         </div>
